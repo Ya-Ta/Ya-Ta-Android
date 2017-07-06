@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="282dp"
+    android:layout_height="360dp"
+    android:layout_gravity="center"
+    android:background="#000000"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="282dp"
+        android:layout_height="360dp"
+        android:layout_gravity="center"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <Button
+            android:id="@+id/message_close_btn"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#00000000"
+            android:gravity="center"
+            android:text="×"
+            android:textSize="25dp" />
+
+        <View
+            android:id="@+id/line4"
+            android:layout_width="282dp"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/message_close_btn"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="#FFFFFF"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <RelativeLayout
+            android:id="@+id/layout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line4">
+
+            <ImageView
+                android:id="@+id/img_time"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/timewhite" />
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/img_time"
+                android:text="출발 시간" />
+
+            <TimePicker
+                android:id="@+id/timePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_time"
+                android:layout_marginLeft="-55dp"
+                android:layout_marginTop="-58dp"
+                android:scaleX="0.55"
+                android:scaleY="0.6"
+                android:theme="@android:style/Theme.Holo"
+                android:timePickerMode="spinner" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/layout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line4"
+            android:layout_marginLeft="-55dp"
+            android:layout_toRightOf="@id/layout1">
+
+
+            <ImageView
+                android:id="@+id/img_with"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/personnumber" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/img_with"
+                android:text="동행객" />
+
+
+            <Button
+                android:id="@+id/plus_btn"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/textView3"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_round"
+                android:gravity="center"
+                android:text="+"
+                android:textColor="#ffffff"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/textView_companion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-10dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="65dp"
+                android:layout_toLeftOf="@id/plus_btn"
+                android:text="0"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-25dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="65dp"
+                android:layout_toRightOf="@id/textView_companion"
+                android:text="명"
+                android:textSize="15dp" />
+
+
+            <Button
+                android:id="@+id/minus_btn"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/plus_btn"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_round"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="#ffffff"
+                android:textSize="15dp" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line6"
+            android:layout_width="0.5dp"
+            android:layout_height="139dp"
+            android:layout_marginLeft="-55dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@id/layout1"
+            android:background="#ffffff" />
+
+        <View
+            android:id="@+id/line5"
+            android:layout_width="282dp"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/layout2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="#FFFFFF" />
+
+        <RelativeLayout
+            android:id="@+id/layout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line5">
+
+            <ImageView
+                android:id="@+id/img_msg"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/message" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/img_msg"
+                android:text="메시지" />
+
+            <EditText
+                android:id="@+id/edit_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="전하고 싶은 메시지를 입력하세요."
+                android:lines="3"
+                android:maxLines="3"
+                android:minLines="3"
+                android:padding="30dp"
+                android:scrollbars="none"
+                android:textSize="12dp" />
+
+            <View
+                android:id="@+id/line8"
+                android:layout_width="225dp"
+                android:layout_height="0.5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="60dp"
+                android:background="#FFFFFF" />
+
+            <View
+                android:layout_width="225dp"
+                android:layout_height="0.5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="80dp"
+                android:background="#FFFFFF" />
+
+            <View
+                android:layout_width="225dp"
+                android:layout_height="0.5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="95dp"
+                android:background="#FFFFFF" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/dialog_registerBtn"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/layout3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/button_round_gradation"
+            android:text="등록하기"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

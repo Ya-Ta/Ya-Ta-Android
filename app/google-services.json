@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "279996518622",
+    "firebase_url": "https://yata-d5556.firebaseio.com",
+    "project_id": "yata-d5556",
+    "storage_bucket": "yata-d5556.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:279996518622:android:49df950526eb4672",
+        "android_client_info": {
+          "package_name": "org.sopt.yata.yata"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "279996518622-euq0bmufv49rvp28cc1vpv6q8rune9h1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAO9spQRpcUJPmNrgPoI8T1HfohwzO3kLc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

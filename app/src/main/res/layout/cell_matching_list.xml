@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="5dp">
+
+    <org.sopt.yata.yata.custom_views.CircleImageView
+        android:id="@+id/image_profile"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/avatar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:textSize="18sp"
+                android:text="차주"
+                android:textColor="#000"/>
+            <android.support.v4.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/text_created_time"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:textColor="#000"
+                android:text="작성 시간"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_sloc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                tools:text="출발지:"
+                android:textColor="#000"/>
+
+            <TextView
+                android:id="@+id/text_eloc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                tools:text="도착지:"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/text_matching_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                tools:text="00:00 출발예정"
+                android:textColor="#000"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_matching_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:text="메세지메시지메시지메시지메시지"
+            android:textColor="#000" />
+
+    </LinearLayout>
+
+</LinearLayout>

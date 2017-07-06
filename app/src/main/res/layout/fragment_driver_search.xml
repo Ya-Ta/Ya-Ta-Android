@@ -1,0 +1,164 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="2">
+            <!--렐러티브로 출발, 도착지 설정 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/search_border_rounded">
+                <!--이미지뷰2, 에디트텍스트2, 뷰(출발 도착 사이 선) -->
+                <View
+                    android:id="@+id/standard"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="60dp"
+                    android:background="#000000" />
+
+                <View
+                    android:id="@+id/standard2"
+                    android:layout_width="1dip"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="60dp"
+                    android:background="#000000"
+                    />
+
+                <ImageView
+                    android:id="@+id/leftImg"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true" />
+
+                <Spinner
+                    android:id="@+id/start_sido"
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/standard"
+                    android:layout_toRightOf="@+id/leftImg"
+                    android:gravity="center"
+                    android:text="시/도"
+                    android:textAlignment="center"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/start_sigungu"
+                    android:layout_width="140dp"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/standard"
+                    android:layout_toRightOf="@+id/standard2"
+                    android:gravity="center"
+                    android:text="시/군/구"
+                    android:textAlignment="center"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/end_sido"
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/standard"
+                    android:layout_toRightOf="@+id/leftImg"
+                    android:gravity="center"
+                    android:text="시/도"
+                    android:textAlignment="center"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/end_sigungu"
+                    android:layout_width="140dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/standard"
+                    android:layout_toRightOf="@+id/standard2"
+                    android:gravity="center"
+                    android:text="시/군/구"
+                    android:textAlignment="center"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:id="@+id/switch_btn"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/standard" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8">
+
+            <FrameLayout
+                android:id="@+id/search_map"
+                class="com.google.android.gms.maps.MapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"/>
+
+
+            <ListView
+                android:id="@+id/search_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/searchbtn"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/button_search"
+        ></RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp">
+
+        <Button
+            android:id="@+id/search_list_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="리스트"
+            />
+
+        <Button
+            android:id="@+id/search_map_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/search_list_btn"
+            android:text="지도"
+            />
+    </RelativeLayout>
+</RelativeLayout>

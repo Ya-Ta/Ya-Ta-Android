@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- default -->
+    <color name="colorPrimary">#0D6CE0</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--스피너 색-->
+    <color name="my_spinner_text_color">#808080</color>
+
+
+    <!-- 야타 테마색 -->
+    <color name="colorMainBlue">#0086D6</color>
+    <color name="colorMainDarkBlue">#0056B6</color>
+    <color name="colorBackground">#eee</color>
+
+    <!-- FIXED-->
+    <color name="colorBackgroundSplashStart">#0D6CE0</color>
+    <color name="colorBackgroundSplashEnd">#042E61</color>
+</resources>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="left|center_vertical"
+    android:orientation="vertical"
+    android:background="@drawable/background_rounded_transparent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="0dp"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="10dp"
+            android:text="X"
+            android:textSize="25dp"
+            android:background="#00ff0000"/>
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="20dp"
+            android:id="@+id/owner_detail_img"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/owner_detail_img"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="20dp"
+            android:text="OWNER"
+            android:id="@+id/textView6" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="240dp"
+        android:layout_height="1dp"
+        android:background="#FFFFFF"
+        android:layout_below="@id/owner_detail_img"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="출발지             :"
+            android:layout_marginLeft="15dp" />
+
+        <TextView
+            android:id="@+id/owner_detail_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line6"
+            android:layout_marginLeft="15dp"
+            android:text="도착지             :" />
+
+        <TextView
+            android:id="@+id/owner_detail_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="240dp"
+        android:layout_height="1dp"
+        android:background="#FFFFFF"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이름                :"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/owner_detail_name"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="나이                :"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:id="@+id/owner_detail_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="평점                :"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:id="@+id/owner_detail_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="동행객             :"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@+id/line6" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/owner_detail_with"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="차량정보          :"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@+id/line6" />
+
+        <TextView
+            android:id="@+id/owner_detail_car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="240dp"
+        android:layout_height="1dp"
+        android:background="#FFFFFF"
+        android:layout_below="@id/owner_detail_img"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="메세지"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/line6" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:textSize="10dp"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/owner_detail_message"/>
+
+    <Button
+        android:id="@+id/owner_detail_cancel"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="매칭신청"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/button_round_gradation"/>
+
+</LinearLayout>

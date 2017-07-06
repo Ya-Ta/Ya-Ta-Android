@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent" >
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:layout_margin="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:paddingLeft="30dp"
+            android:paddingTop="20dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="애플리케이션 정보"
+                android:textColor="#000000"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_below="@id/textView7"
+                android:text="현재버전"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_below="@id/textView7"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@id/textView8"
+                android:id="@+id/settings_version"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_below="@id/textView8"
+                android:layout_marginTop="6dp"
+                android:text="오픈소스 라이선스"
+                android:textColor="#000000" />
+
+            <ImageView
+                android:id="@+id/settings_license"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="6dp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/textView8"
+                android:src="@drawable/more"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="#BDBDBD" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="20dp"
+            android:paddingTop="15dp">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="내 정보"
+                android:textColor="#000000"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="이메일주소"
+                android:textColor="#000000"
+                android:layout_below="@+id/textView9"
+                android:layout_alignParentStart="true" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/settings_email"
+                android:layout_below="@+id/textView9"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/more"/>
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_below="@id/textView10"
+                android:layout_marginTop="6dp"
+                android:text="휴대폰번호"
+                android:textColor="#000000" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/settings_phone"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/settings_email"
+                android:layout_marginTop="6dp"
+                android:padding="0dp"
+                android:src="@drawable/more"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_below="@id/textView11"
+                android:layout_marginTop="6dp"
+                android:text="비밀번호"
+                android:textColor="#000000" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/settings_pw"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/settings_phone"
+                android:layout_marginTop="6dp"
+                android:padding="0dp"
+                android:src="@drawable/more"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="#BDBDBD" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="20dp"
+            android:paddingTop="15dp">
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="서비스 정보"
+                android:textColor="#000000"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="위치기반 서비스 이용약관"
+                android:textColor="#000000"
+                android:layout_below="@+id/textView12"
+                android:layout_alignParentStart="true" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/settings_tos"
+                android:layout_below="@+id/textView12"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/more"/>
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_below="@id/textView13"
+                android:layout_marginTop="6dp"
+                android:text="개인정보 취급방침"
+                android:textColor="#000000" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/settings_privacy"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/settings_tos"
+                android:layout_marginTop="6dp"
+                android:padding="0dp"
+                android:src="@drawable/more"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_below="@id/textView14"
+                android:layout_marginTop="6dp"
+                android:text="서비스 이용정책"
+                android:textColor="#000000" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/settings_sup"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/settings_privacy"
+                android:layout_marginTop="6dp"
+                android:padding="0dp"
+                android:src="@drawable/more"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="#BDBDBD" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="20dp"
+            android:paddingTop="15dp">
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="마케팅 수신 동의 설정"
+                android:textColor="#000000"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView15"
+                android:text="이메일"
+                android:textColor="#000000" />
+
+            <Switch
+                android:id="@+id/settings_switch_email"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:switchMinWidth="50dp"
+                android:layout_below="@+id/textView15"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_below="@id/textView16"
+                android:layout_marginTop="6dp"
+                android:text="SMS"
+                android:textColor="#000000" />
+
+            <Switch
+                android:id="@+id/settings_switch_sms"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/settings_switch_email"
+                android:layout_marginTop="-2dp"
+                android:switchMinWidth="50dp"/>
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_below="@id/textView17"
+                android:layout_marginTop="6dp"
+                android:text="푸시알림"
+                android:textColor="#000000" />
+
+            <Switch
+                android:id="@+id/settings_switch_push"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/settings_switch_sms"
+                android:layout_marginTop="-2dp"
+                android:padding="0dp"
+                android:switchMinWidth="50dp"
+                />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="#BDBDBD" />
+
+        <TextView
+            android:id="@+id/settings_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:text="로그아웃"
+            android:textColor="#000000"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+</ScrollView>

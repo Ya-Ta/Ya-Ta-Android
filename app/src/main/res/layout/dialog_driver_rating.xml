@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="282dp"
+    android:layout_height="210dp"
+    android:layout_gravity="center"
+    android:background="#77000000"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="15dp"
+    android:paddingTop="25dp"
+    >
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="운전자 평가"
+        android:textSize="15dp"/>
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/text3"
+        android:id="@+id/driver_rating_img"/>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_toRightOf="@id/driver_rating_img"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/text3"
+        android:gravity="center_vertical"
+        android:id="@+id/layout4">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/driver_rating_name"
+                android:text="운전자"/>
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_marginTop="5dp"
+                android:isIndicator="false"
+                android:layout_below="@id/driver_rating_name"
+                android:stepSize="1"
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <Button
+        android:id="@+id/driver_rating_fin"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:text="평가완료"
+        android:background="@drawable/button_round_gradation"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

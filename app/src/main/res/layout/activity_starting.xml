@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager_login_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    </android.support.v4.view.ViewPager>
+
+    <ImageView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:src="@drawable/loginpage_yatalogo"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="40dp"/>
+
+
+
+    <Button
+        android:id="@+id/button_signup"
+        android:background="@drawable/button_signup_loginpage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:text="회원가입"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"/>
+    <Button
+        android:id="@+id/button_login"
+        android:background="@drawable/button_login_loginpage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textColor="@drawable/solid_button_text_color"
+        android:text="로그인"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/button_signup"
+        android:textSize="18sp" />
+
+
+</RelativeLayout>
