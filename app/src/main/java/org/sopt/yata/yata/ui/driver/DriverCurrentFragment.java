@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -30,7 +31,6 @@ import static org.sopt.yata.yata.R.id.list_matching;
  */
 
 public class DriverCurrentFragment extends Fragment {
-    final static String TAG = "taehyungEE";
 
     NetworkService networkService;
     ListView matchingList;
@@ -60,6 +60,11 @@ public class DriverCurrentFragment extends Fragment {
     public DriverCurrentFragment(){ }
 
     @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_driver_current, container, false);
 
@@ -77,8 +82,8 @@ public class DriverCurrentFragment extends Fragment {
 
         search(index);
         //리스트 뿌려주는 코드
-//        matchingList = (ListView) view.findViewById(R.id.list_matching);
-//        matchingList.setAdapter(adapter);
+        matchingList = (ListView) view.findViewById(R.id.list_matching);
+        matchingList.setAdapter(adapter);
 
         return view;
     }
@@ -108,7 +113,6 @@ public class DriverCurrentFragment extends Fragment {
 
                         OwnerListAdapter resultAdapter = new OwnerListAdapter(context, matchingResultListDatas); // 마지막 0 은 쓰레기값 : 생상자 오버로딩을 위해
                         matchingList.setAdapter(resultAdapter);
-
 
                     }catch(NullPointerException ne){
                         ne.printStackTrace();

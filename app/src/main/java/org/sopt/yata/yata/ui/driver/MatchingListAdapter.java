@@ -159,7 +159,7 @@ public class MatchingListAdapter extends BaseAdapter {
                 TODO 작업 후 "받은 출발지" -> sloc 으로 변경해야 함
                         "받은 목적지" -> eloc 으로 변경해야 함
                 */
-                text_start.setText("받은 출발지");
+                text_start.setText("받은 도착지");
                 text_end.setText("받은 도착지");
                 text_userName.setText(user_name);
                 text_age.setText(String.valueOf(age));

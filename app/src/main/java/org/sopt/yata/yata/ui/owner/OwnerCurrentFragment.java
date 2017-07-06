@@ -39,13 +39,15 @@ public class OwnerCurrentFragment extends Fragment {
     public Context context;
     public Activity activity;
 
-    ArrayList<MatchingResultListData> matchingResultListDatas;
+    ArrayList<org.sopt.yata.yata.ui.owner.MatchingResultListData> matchingResultListDatas;
 
-    org.sopt.yata.yata.ui.driver.MatchingListAdapter adapter;
+    org.sopt.yata.yata.ui.owner.DriverListAdapter adapter;
 
     public OwnerCurrentFragment(Activity activity, Context context){
         this.activity = activity;
         this.context = context;
+
+        adapter = new DriverListAdapter(context, null, 0);
     }
 
 
@@ -57,8 +59,10 @@ public class OwnerCurrentFragment extends Fragment {
         token = user_token.getString("token", null);
         SharedPreferences user_idx = activity.getSharedPreferences("userIdx", MODE_PRIVATE);
         index = user_idx.getInt("userIdx", 0);
+        Log.d("jebal", "onCreateView: " + index);
 
         search(index);
+        //리스트 뿌려주기
         receivedList = (ListView) view.findViewById(R.id.list_matching);
         receivedList.setAdapter(adapter);
 
@@ -77,7 +81,7 @@ public class OwnerCurrentFragment extends Fragment {
     public void search(int index){
         networkService = ApplicationController.getInstance().getNetworkService();
 
-        Call<CurrentDriverListResult> requestCurrentListResult = networkService.getCurrentDriverListResult(token);
+        Call<CurrentDriverListResult> requestCurrentListResult = networkService.getCurrentDriverListResult(index ,token);
         requestCurrentListResult.enqueue(new Callback<CurrentDriverListResult>() {
             @Override
             public void onResponse(Call<CurrentDriverListResult> call, Response<CurrentDriverListResult> response) {
@@ -85,9 +89,10 @@ public class OwnerCurrentFragment extends Fragment {
                 if (response.isSuccessful()) {
                     try{
                         matchingResultListDatas = response.body().result;
-                        Log.d("KOO", "matchingResultListDatas: in Owner: " + response.body().result);
+                        Log.d("KOO", "matchingResultListDatas: in Owner: " + matchingResultListDatas);
 
                         DriverListAdapter resultAdapter = new DriverListAdapter(context, matchingResultListDatas);
+                        receivedList.setAdapter(resultAdapter);
 
                     }catch(NullPointerException ne){
                         ne.printStackTrace();

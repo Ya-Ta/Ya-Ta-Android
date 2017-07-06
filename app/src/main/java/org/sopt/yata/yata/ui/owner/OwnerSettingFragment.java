@@ -1,6 +1,8 @@
 package org.sopt.yata.yata.ui.owner;
 
+import android.app.Activity;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,7 +15,15 @@ import org.sopt.yata.yata.R;
  */
 
 public class OwnerSettingFragment extends Fragment {
-    public OwnerSettingFragment(){
+    Activity activity;
+
+    public OwnerSettingFragment(Activity activity){
+        this.activity = activity;
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
     }
 
     @Override

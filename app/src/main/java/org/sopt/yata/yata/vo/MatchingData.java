@@ -17,4 +17,7 @@ public class MatchingData{
 
     public String matching_time;
     public int applying_idx;
+
+    public String applying_created_at;
+    public String applying_message;
 }

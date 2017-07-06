@@ -1,333 +1,345 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="wrap_content"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/profile"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
-    android:id="@+id/profileRootLayout"
-    >
+    android:padding="0dp">
 
-    <RelativeLayout
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginBottom="10dp"
-        android:layout_weight="4.3"
-        android:background="#EAEAEA">
-
-        <ImageView
-            android:id="@+id/profile_img"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:src="@drawable/profile_photocircle" />
-
-
-        <TextView
-            android:id="@+id/profile_change"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/profile_img"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp"
-            android:text="프로필 변경"
-            android:textColor="#1266FF" />
-
-        <ImageView
-            android:id="@+id/img_change_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/profile_img"
-            android:layout_marginLeft="-32dp"
-            android:layout_above="@id/profile_change"
-            android:src="@drawable/profilechange" />
-    </RelativeLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginBottom="10dp"
-        android:layout_weight="2"
-        android:background="#EAEAEA"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
         android:orientation="vertical">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal">
+            android:layout_marginBottom="10dp"
+            android:layout_weight="4.3"
+            android:background="#EAEAEA">
 
             <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="0dp"
+                android:id="@+id/profile_img"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="17dp"
-                android:layout_weight="1"
-                android:paddingBottom="7dp"
-                android:paddingTop="10dp"
-                android:src="@drawable/mail" />
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/profile_photocircle" />
+
 
             <TextView
-                android:id="@+id/profile_email"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="8"
-                android:gravity="center_vertical"
-                android:text="Email Address"
-                android:textColor="#000000" />
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="15dp"
-            android:layout_marginStart="15dp"
-            android:background="#747474" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal">
+                android:id="@+id/profile_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="프로필 변경"
+                android:textColor="#1266FF" />
 
             <ImageView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="17dp"
-                android:layout_weight="1"
-                android:paddingBottom="7dp"
-                android:paddingTop="10dp"
-                android:src="@drawable/phone"  />
-
-            <TextView
-                android:id="@+id/profile_phone"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="8"
-                android:gravity="center_vertical"
-                android:text="Phone number"
-                android:textColor="#000000" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3"
-        android:background="#EAEAEA"
-        android:orientation="vertical"
-        android:layout_marginBottom="10dp">
+                android:id="@+id/img_change_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/profile_change"
+                android:layout_marginLeft="-32dp"
+                android:layout_toRightOf="@id/profile_img"
+                android:src="@drawable/profilechange" />
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:orientation="horizontal"
-            android:layout_weight="1">
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="17dp"
-                android:layout_weight="1"
-                android:paddingBottom="7dp"
-                android:paddingTop="10dp"
-                android:src="@drawable/id_card"/>
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:id="@+id/profile_name"
-                android:text="Username"
-                android:textColor="#000000"
-                android:gravity="center_vertical"
-                android:layout_weight="8"/>
-        </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
-            android:layout_height="0.5dp"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:background="#747474"
-            />
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:orientation="horizontal"
-            android:layout_weight="1">
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="17dp"
-                android:layout_weight="1"
-                android:paddingBottom="7dp"
-                android:paddingTop="10dp"
-                android:src="@drawable/avatar"/>
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:id="@+id/profile_id"
-                android:text="ID"
-                android:textColor="#000000"
-                android:gravity="center_vertical"
-                android:layout_weight="8"/>
-
-        </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
-            android:layout_height="0.5dp"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:background="#747474"
-            />
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:orientation="horizontal"
-            android:layout_weight="1">
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="17dp"
-                android:layout_weight="1"
-                android:paddingBottom="7dp"
-                android:paddingTop="10dp"
-                android:src="@drawable/password"/>
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:id="@+id/profile_pw"
-                android:text="Password"
-                android:textColor="#000000"
-                android:gravity="center_vertical"
-                android:layout_weight="8"/>
-
-        </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="4.5"
-        android:background="#EAEAEA"
-        android:orientation="vertical">
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="10dp"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:background="@drawable/background_splash"
-            />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1.5"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="   추가 정보"
-                android:textSize="17dp"
-                android:textColor="#000000"
-                android:gravity="center_vertical"/>
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:text="  박스를 눌러 해당 정보를 확인해보세요."
-                android:textColor="#000000"
-                android:gravity="center_vertical"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="5"
-            android:orientation="horizontal"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"
-            >
-
-            <ImageButton
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:padding="2dp"
-                android:id="@+id/profile_info_btn"
-                android:src="@drawable/button_driverinformation"
-                android:background="#EAEAEA"
-                />
-
-            <ImageButton
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:padding="2dp"
-                android:id="@+id/profile_ia_btn"
-                android:src="@drawable/button_insurance"
-                android:background="#EAEAEA"
-                />
-
-            <ImageButton
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:padding="2dp"
-                android:id="@+id/profile_history_btn"
-                android:src="@drawable/button_list"
-                android:background="#EAEAEA"/>
-
-            <ImageButton
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:padding="2dp"
-                android:id="@+id/profile_event_btn"
-                android:src="@drawable/button_event"
-                android:background="#EAEAEA"
-                />
-
-
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
             android:layout_weight="2"
-            >
-            <RelativeLayout
+            android:background="#EAEAEA"
+            android:orientation="vertical">
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="0dp"
-                >
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
                 <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="17dp"
+                    android:layout_weight="1"
+                    android:paddingBottom="7dp"
+                    android:paddingTop="10dp"
+                    android:src="@drawable/mail" />
+
+                <TextView
+                    android:id="@+id/profile_email"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical"
+                    android:text="Email Address"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:background="#747474" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="17dp"
+                    android:layout_weight="1"
+                    android:paddingBottom="7dp"
+                    android:paddingTop="10dp"
+                    android:src="@drawable/phone" />
+
+                <TextView
+                    android:id="@+id/profile_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical"
+                    android:text="Phone number"
+                    android:textColor="#000000" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="3"
+            android:background="#EAEAEA"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="17dp"
+                    android:layout_weight="1"
+                    android:paddingBottom="7dp"
+                    android:paddingTop="10dp"
+                    android:src="@drawable/id_card" />
+
+                <TextView
+                    android:id="@+id/profile_name"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical"
+                    android:text="Username"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:background="#747474" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="17dp"
+                    android:layout_weight="1"
+                    android:paddingBottom="7dp"
+                    android:paddingTop="10dp"
+                    android:src="@drawable/avatar" />
+
+                <TextView
+                    android:id="@+id/profile_id"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical"
+                    android:text="ID"
+                    android:textColor="#000000" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:background="#747474" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="17dp"
+                    android:layout_weight="1"
+                    android:paddingBottom="7dp"
+                    android:paddingTop="10dp"
+                    android:src="@drawable/password" />
+
+                <TextView
+                    android:id="@+id/profile_pw"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical"
+                    android:text="Password"
+                    android:textColor="#000000" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4.5"
+            android:background="#EAEAEA"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/background_splash" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1.5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="   추가 정보"
+                    android:textColor="#000000"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical"
+                    android:text="  박스를 눌러 해당 정보를 확인해보세요."
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:orientation="horizontal"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp">
+
+                <ImageButton
+                    android:id="@+id/profile_info_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#EAEAEA"
+                    android:padding="2dp"
+                    android:src="@drawable/button_driverinformation" />
+
+                <ImageButton
+                    android:id="@+id/profile_ia_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#EAEAEA"
+                    android:padding="2dp"
+                    android:src="@drawable/button_insurance" />
+
+                <ImageButton
+                    android:id="@+id/profile_history_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#EAEAEA"
+                    android:padding="2dp"
+                    android:src="@drawable/button_list" />
+
+                <ImageButton
+                    android:id="@+id/profile_event_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#EAEAEA"
+                    android:padding="2dp"
+                    android:src="@drawable/button_event" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2">
+
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/belowbox"
-                    android:layout_margin="0dp"
-                    android:padding="0dp"
-                    />
+                    android:padding="0dp">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/belowtext_justride"
-                    android:layout_centerVertical="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerInParent="true"
-                    />
-            </RelativeLayout>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
+                        android:background="@drawable/belowbox"
+                        android:padding="0dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/belowtext_justride" />
+                </RelativeLayout>
+            </LinearLayout>
         </LinearLayout>
+
     </LinearLayout>
-</LinearLayout>
+</RelativeLayout>

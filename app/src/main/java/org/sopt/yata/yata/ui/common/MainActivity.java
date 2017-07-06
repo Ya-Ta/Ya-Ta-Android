@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
             }
             @Override
             public void onFailure(Call<OwnerStatusResult> call, Throwable t) {
-                Toast.makeText(context, "Fail !", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "main->owner response fail !", Toast.LENGTH_SHORT).show();
                 Log.i("err", "" + t.getMessage());
             }
         });

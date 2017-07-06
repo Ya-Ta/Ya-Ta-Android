@@ -77,7 +77,7 @@ public interface NetworkService {
 
     //차주 -> 나에게 신청한 운전자 목록
     @GET("owner/match/list/{matching_idx}")
-    Call<CurrentDriverListResult> getCurrentDriverListResult(@Header("token") String token);
+    Call<CurrentDriverListResult> getCurrentDriverListResult(@Path("matching_idx") int matching_idx,@Header("token") String token);
 
     @GET("owner")
     Call<OwnerStatusResult> getOwnerStatus(@Header("token") String token);

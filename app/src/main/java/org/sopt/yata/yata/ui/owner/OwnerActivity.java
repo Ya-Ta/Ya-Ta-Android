@@ -56,10 +56,10 @@ public class OwnerActivity extends AppCompatActivity {
         SharedPreferences user_type = context.getSharedPreferences("user_type", MODE_PRIVATE);
         type = user_type.getInt("user_type", 0);
 
-        ownerSearch = new OwnerSearchFragment(this);
+        ownerSearch = new OwnerSearchFragment(activity);
         ownerCurrent = new OwnerCurrentFragment(activity, context);
         profile = new ProfileFragment(activity);
-        ownerSetting = new OwnerSettingFragment();
+        ownerSetting = new OwnerSettingFragment(activity);
 
         mSectionsPagerAdapter = new OwnerActivity.SectionsPagerAdapter(getSupportFragmentManager());
         fragmentList.add(0, ownerSearch);

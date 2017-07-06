@@ -4,7 +4,9 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +18,8 @@ import org.sopt.yata.yata.R;
 import org.sopt.yata.yata.application.ApplicationController;
 import org.sopt.yata.yata.network.NetworkService;
 
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -41,9 +45,16 @@ public class ProfileFragment extends Fragment {
     }
 
     @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mContext = getContext();
-        return inflater.inflate(R.layout.myprofile, container, false);
+        View view = inflater.inflate(R.layout.myprofile, container, false);
+        ButterKnife.bind(this, view);
+        return view;
+
     }
 
     @Override
@@ -114,4 +125,62 @@ public class ProfileFragment extends Fragment {
         });
 
     }
+    @OnClick(R.id.profile_info_btn)
+    public void infoBtn() {
+        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+        ProfileMenuFragment fragment = new ProfileMenuFragment();
+
+        Bundle bundle = new Bundle();
+        bundle.putInt("menu", 1);
+        fragment.setArguments(bundle);
+
+        transaction.addToBackStack(null);
+        transaction.replace(R.id.profile, fragment);
+        transaction.commit();
+
+    }
+
+    @OnClick(R.id.profile_ia_btn)
+    public void iaBtn() {
+        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+        ProfileMenuFragment fragment = new ProfileMenuFragment();
+
+        Bundle bundle = new Bundle();
+        bundle.putInt("menu", 2);
+        fragment.setArguments(bundle);
+        transaction.addToBackStack(null);
+
+        transaction.replace(R.id.profile, fragment);
+        transaction.commit();
+    }
+
+    @OnClick(R.id.profile_history_btn)
+    public void historyBtn() {
+        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+        ProfileMenuFragment fragment = new ProfileMenuFragment();
+
+        Bundle bundle = new Bundle();
+        bundle.putInt("menu", 3);
+        fragment.setArguments(bundle);
+        transaction.addToBackStack(null);
+
+        transaction.replace(R.id.profile, fragment);
+        transaction.commit();
+    }
+
+    @OnClick(R.id.profile_event_btn)
+    public void eventBtn() {
+        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+        ProfileMenuFragment fragment = new ProfileMenuFragment();
+
+        Bundle bundle = new Bundle();
+        bundle.putInt("menu", 4);
+        fragment.setArguments(bundle);
+        transaction.addToBackStack(null);
+
+        transaction.replace(R.id.profile, fragment);
+        transaction.commit();
+
+    }
+
 }

@@ -118,6 +118,22 @@ public class OwnerSearchFragment extends Fragment implements View.OnClickListene
         mContext = getContext();
         View layout = inflater.inflate(R.layout.fragment_owner_register, container, false);
 
+        SharedPreferences user_type = mContext.getSharedPreferences("user_type", MODE_PRIVATE);
+        type = user_type.getInt("user_type", 0);
+
+        if(type == 1){
+            final DialogRegistered dialogRegistered = new DialogRegistered(mContext);
+            dialogRegistered.show();
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable(){
+                @Override
+                public void run() {
+                    dialogRegistered.dismiss();
+                }
+            }, 5000);
+        }
+
         return layout;
     }
 
@@ -134,23 +150,7 @@ public class OwnerSearchFragment extends Fragment implements View.OnClickListene
 
         searchBtn.setOnClickListener(this);
 
-        SharedPreferences user_type = mContext.getSharedPreferences("user_type", MODE_PRIVATE);
-        type = user_type.getInt("user_type", 0);
 
-        if(type == 1){
-            final DialogRegistered dialogRegistered = new DialogRegistered(mContext);
-            dialogRegistered.show();
-
-            Handler handler = new Handler();
-            handler.postDelayed(new Runnable(){
-                @Override
-                public void run() {
-                    dialogRegistered.dismiss();
-                }
-            }, 5000);
-
-
-        }
 
         //자동완성 코드 나중으로 미루기
 //        PlaceAutocompleteFragment autocompleteFragment = (PlaceAutocompleteFragment) getActivity().getFragmentManager().findFragmentById(R.id.place_autocomplete_fragment);
