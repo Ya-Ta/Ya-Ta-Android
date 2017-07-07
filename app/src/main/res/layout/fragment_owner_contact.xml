@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#CC000000"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="143dp">
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="10dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/yatalogo_list"
+            />
+        <Button
+            android:id="@+id/driver_contact_text"
+            android:background="@null"
+            android:layout_width="20dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="50dp"/>
+
+        <Button
+            android:id="@+id/driver_contact_call"
+            android:layout_width="20dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="85dp"
+            android:background="@null" />
+        <ImageView
+            android:layout_width="142dp"
+            android:layout_height="58dp"
+            android:layout_marginLeft="38dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/list_textcallbox"/>
+
+        <ImageView
+            android:layout_width="142dp"
+            android:layout_height="58dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="38dp"
+            android:layout_marginTop="72dp"
+            android:src="@drawable/list_ownerbox"
+            />
+
+        <ImageView
+            android:layout_width="190dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="10dp"/>
+
+        <ImageView
+            android:id="@+id/driver_contact_image"
+            android:layout_width="116dp"
+            android:layout_height="116dp"
+            android:src="@drawable/owner_profile"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="13.5dp"
+            android:layout_marginBottom="13.5dp"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FFFFFF"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="출발지"
+                android:textColor="#fff"
+                android:layout_marginRight="25dp"
+                android:textSize="14sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:layout_marginRight="25dp"
+                android:textSize="14sp"
+                android:textColor="#fff"/>
+            <TextView
+                android:id="@+id/driver_contact_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#BFFFFFFF"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="도착지"
+                android:textSize="14sp"
+                android:textColor="#fff"
+                android:layout_marginRight="25dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text=":"
+                android:textSize="14sp"
+                android:layout_marginRight="25dp"
+                />
+
+            <TextView
+                android:id="@+id/driver_contact_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#BFFFFFFF"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FFFFFF"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이름"
+                android:textColor="#fff"
+                android:layout_marginRight="37dp"
+                android:textSize="14dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text=":"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/driver_contact_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#BFFFFFFF"
+                android:layout_marginLeft="25dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="나이"
+                android:textSize="14sp"
+                android:textColor="#fff"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text=":"
+                android:textSize="14sp"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="37dp"
+                />
+            <TextView
+                android:id="@+id/driver_contact_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textColor="#BFFFFFFF"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="평점"
+                android:textColor="#fff"
+                android:textSize="14sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text=":"
+                android:textSize="14sp"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="37dp"
+                />
+
+            <TextView
+                android:id="@+id/driver_contact_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#BFFFFFFF"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="동행객"
+                android:textColor="#fff"
+                android:textSize="14sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text=":"
+                android:textSize="14sp"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="25dp"
+                />
+            <TextView
+                android:id="@+id/driver_contact_with"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#BFFFFFFF"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="차량정보"
+                android:textColor="#fff"
+                android:textSize="14sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text=":"
+                android:textSize="14sp"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="11dp"
+                />
+            <TextView
+                android:id="@+id/driver_contact_career"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#BFFFFFFF"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FFFFFF"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="메세지"
+            android:textSize="14sp"
+            android:textColor="#fff"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="29dp"
+            android:id="@+id/driver_contact_message"
+            android:textColor="#BFFFFFFF"
+            android:textSize="10dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="6dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/insurance_car_btn"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/button_round_white"
+            android:text="매칭취소"
+            android:textColor="@drawable/stroke_button_text_color"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/insurance_btn"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/bluebutton"
+            android:text="매칭완료"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="84dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/belowbox"
+            android:scaleX="1.5"/>
+        <ImageView
+            android:layout_width="123dp"
+            android:layout_height="19dp"
+            android:layout_marginTop="34dp"
+            android:src="@drawable/belowtext_justride"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+</LinearLayout>

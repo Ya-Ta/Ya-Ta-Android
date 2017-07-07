@@ -13,20 +13,22 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:background="#44000000"
-        android:layout_margin="10dp">
+        android:layout_height="115dp"
+        android:background="@drawable/background_dialog"
+        android:layout_marginLeft="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginTop="10dp">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:padding="10dp"
-
             android:id="@+id/layout1">
             <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
                 android:id="@+id/img"
+                android:layout_marginTop="13dp"
+                android:layout_marginBottom="11dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:src="@drawable/arrow"
@@ -36,6 +38,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/driving_start"
+                android:layout_marginTop="15dp"
+                android:textSize="14sp"
+                android:layout_marginBottom="15dp"
                 android:layout_toStartOf="@id/img"
                 android:textColor="#000000"/>
 
@@ -43,6 +48,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toEndOf="@id/img"
+                android:layout_marginTop="15dp"
+                android:textSize="14sp"
+                android:layout_marginBottom="15dp"
                 android:id="@+id/driving_end"
                 android:textColor="#000000"/>
         </RelativeLayout>
@@ -57,7 +65,7 @@
         <RelativeLayout
             android:id="@+id/layout2"
             android:layout_below="@id/layout1"
-            android:layout_width="182dp"
+            android:layout_width="171dp"
             android:layout_height="match_parent"
             >
 
@@ -65,12 +73,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="남은 거리"
+                android:textSize="12sp"
                 android:layout_alignParentEnd="true"
                 android:layout_margin="10dp"
                 />
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="18dp"
+                android:src="@drawable/left_distance"/>
 
             <View
-                android:layout_width="125dp"
+                android:layout_width="120dp"
                 android:layout_height="1dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
@@ -80,28 +96,29 @@
                 android:id="@+id/text1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="km"
+                android:text=" km"
+                android:textSize="12sp"
+                android:textColor="#CCffffff"
                 android:layout_centerVertical="true"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentEnd="true"
-                android:layout_margin="10dp"/>
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
 
             <TextView
 
                 android:id="@+id/remain_distance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
+                android:textSize="12sp"
+                android:textColor="#CCffffff"
                 android:layout_alignParentBottom="true"
                 android:layout_toStartOf="@id/text1"
-                android:layout_margin="10dp"/>
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
 
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_centerVertical="true"
-                android:layout_margin="10dp"
-                android:src="@drawable/left_distance"/>
+
 
         </RelativeLayout>
         <View
@@ -115,19 +132,20 @@
         <RelativeLayout
             android:layout_toEndOf="@id/layout2"
             android:layout_below="@id/layout1"
-            android:layout_width="182dp"
+            android:layout_width="171dp"
             android:layout_height="match_parent">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="남은 시간"
+                android:textSize="12sp"
                 android:layout_alignParentEnd="true"
                 android:layout_margin="10dp"
                 />
 
             <View
-                android:layout_width="125dp"
+                android:layout_width="120dp"
                 android:layout_height="1dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
@@ -137,11 +155,15 @@
                 android:id="@+id/text2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="분"
+                android:text=" 분"
+                android:textSize="12sp"
+                android:textColor="#CCffffff"
                 android:layout_centerVertical="true"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentEnd="true"
-                android:layout_margin="10dp"/>
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"/>
 
             <TextView
 
@@ -151,13 +173,16 @@
                 android:layout_centerVertical="true"
                 android:layout_alignParentBottom="true"
                 android:layout_toStartOf="@id/text2"
-                android:layout_margin="10dp"/>
+                android:textColor="#CCffffff"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
 
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
                 android:layout_centerVertical="true"
-                android:layout_margin="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="18dp"
                 android:src="@drawable/timewhite"/>
         </RelativeLayout>d
 
@@ -165,39 +190,34 @@
 
     <ImageButton
         android:id="@+id/arrive_btn"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="93dp"
         android:background="@drawable/arrive"
         android:layout_alignParentBottom="true"/>
 
     <ImageButton
         android:id="@+id/kakao_btn"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="93dp"
         android:background="@drawable/kakao"
         android:layout_alignParentBottom="true"
         android:layout_toEndOf="@id/arrive_btn"/>
 
     <ImageButton
         android:id="@+id/problem_btn"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="93dp"
         android:background="@drawable/problem"
         android:layout_alignParentBottom="true"
         android:layout_toEndOf="@id/kakao_btn"/>
 
+
     <ImageButton
-        android:id="@+id/nav_btn"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
         android:layout_above="@id/arrive_btn"
-        android:layout_margin="20dp"
-        android:background="@drawable/navigation"/>
-    <ImageButton
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_above="@id/nav_btn"
         android:layout_marginLeft="20dp"
+        android:layout_marginBottom="25dp"
         android:background="@drawable/departure"
         android:id="@+id/departure_btn"/>
 </RelativeLayout>

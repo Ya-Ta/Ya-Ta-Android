@@ -15,4 +15,6 @@ public class MatchingResultListData {
     public String matching_message;
     public String matching_time;
     public int matching_companion;
+    public int matching_type;
+    public String user_phone;
 }

@@ -8,13 +8,13 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 
 import org.sopt.yata.yata.R;
+import org.sopt.yata.yata.application.YaTaActivity;
 import org.sopt.yata.yata.network.NetworkService;
 import org.sopt.yata.yata.ui.common.ProfileFragment;
 import org.sopt.yata.yata.ui.owner.DriverSettingFragment;
@@ -26,7 +26,7 @@ import butterknife.BindViews;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class DriverActivity extends AppCompatActivity {
+public class DriverActivity extends YaTaActivity {
 
     public static int userType;
     String token;

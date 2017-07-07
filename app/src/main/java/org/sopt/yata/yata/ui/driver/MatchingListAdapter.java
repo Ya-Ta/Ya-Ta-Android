@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -122,6 +123,7 @@ public class MatchingListAdapter extends BaseAdapter {
         eLoc.setText(curData.matching_eaddr);
         message.setText(curData.matching_message);
         created_time.setText(curData.matching_created_at);
+        time.setText(curData.matching_time);
 
         convertView.setTag(position);
         convertView.setOnClickListener(new View.OnClickListener(){
@@ -153,14 +155,16 @@ public class MatchingListAdapter extends BaseAdapter {
                 TextView text_companion = (TextView) dialog.findViewById(R.id.owner_detail_with);
                 TextView text_carInfo = (TextView) dialog.findViewById(R.id.owner_detail_car);
                 TextView text_message = (TextView) dialog.findViewById(R.id.owner_detail_message);
+                ImageButton cancel_btn = (ImageButton) dialog.findViewById(R.id.cancel_btn);
+                Button matchingBtn = (Button) dialog.findViewById(R.id.owner_detail_cancel);
 
 
                 /*
                 TODO 작업 후 "받은 출발지" -> sloc 으로 변경해야 함
                         "받은 목적지" -> eloc 으로 변경해야 함
                 */
-                text_start.setText("받은 도착지");
-                text_end.setText("받은 도착지");
+                text_start.setText(sloc);
+                text_end.setText(eloc);
                 text_userName.setText(user_name);
                 text_age.setText(String.valueOf(age));
                 text_average.setText(String.valueOf(average));
@@ -171,7 +175,13 @@ public class MatchingListAdapter extends BaseAdapter {
                 dialog.show();
                 dialog.getWindow().setGravity(Gravity.LEFT);
 
-                Button matchingBtn = (Button) dialog.findViewById(R.id.owner_detail_cancel);
+                cancel_btn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+
                 matchingBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -268,14 +278,7 @@ public class MatchingListAdapter extends BaseAdapter {
                                                             }, 1000);
 
                                                             Toast.makeText(context, "response 받음", Toast.LENGTH_SHORT).show();
-
-
-
-//                                                            //current tab 으로 넘어가는 코드
-//                                                            ((DriverActivity)context).finish(); //  일단 기존꺼 닫고
-//                                                            Intent i = new Intent(context, DriverActivity.class);
-//                                                            i.putExtra("index", "1".toString()); // 뒤에 넘어가는 1은 탭인덱스
-//                                                            ((DriverActivity)context).startActivity(i);
+                                                            //current tab 으로 넘어가는 코드
                                                             ((DriverActivity)context).tabSelect(1);
                                                         }
                                                     }catch(NullPointerException ne){
@@ -302,7 +305,10 @@ public class MatchingListAdapter extends BaseAdapter {
 
                     }
                 });
+
             }
+
+
         });
 
 

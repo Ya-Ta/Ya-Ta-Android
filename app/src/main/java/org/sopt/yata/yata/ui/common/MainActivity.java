@@ -5,12 +5,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
 
 import org.sopt.yata.yata.R;
 import org.sopt.yata.yata.application.ApplicationController;
+import org.sopt.yata.yata.application.YaTaActivity;
 import org.sopt.yata.yata.network.NetworkService;
 import org.sopt.yata.yata.ui.driver.DriverActivity;
 import org.sopt.yata.yata.ui.owner.OwnerActivity;
@@ -21,7 +21,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends YaTaActivity {
     private final int OWNER_USER = 20000;
     private final int DRIVER_USER = 20001;
 

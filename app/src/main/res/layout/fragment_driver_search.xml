@@ -142,12 +142,18 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="84dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="-40dp"
-        android:layout_marginLeft="-40dp"
-        android:layout_marginRight="-40dp"
-        android:src="@drawable/belowbox"/>
+        android:background="@drawable/belowbox"
+        android:layout_marginBottom="-12dp"
+        android:scaleX="1.5"/>
+    <ImageView
+        android:layout_width="123dp"
+        android:layout_height="19dp"
+        android:src="@drawable/belowtext_justride"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"/>
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

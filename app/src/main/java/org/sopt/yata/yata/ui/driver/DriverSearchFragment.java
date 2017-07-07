@@ -18,7 +18,6 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -47,7 +46,6 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 import static android.content.Context.MODE_PRIVATE;
-import static org.sopt.yata.yata.R.id.map;
 
 
 /**
@@ -63,20 +61,20 @@ public class DriverSearchFragment extends Fragment {
 
     String searchStr;
 
-
     Button searchBtn;
     RecyclerView recyclerView;
     LinearLayoutManager mLayoutManager;
     DriverSearchListFragment driverSearchList;
     FragmentManager myFragmentManager;
-    FrameLayout layout_map;
     ListView layout_list;
     Button list_btn;
     Button map_btn;
     Button switch_btn;
+    View mapFragmentParent;
 
     Context mContext;
     Context listContext;
+
 
     NetworkService networkService;
     String token;
@@ -123,8 +121,7 @@ public class DriverSearchFragment extends Fragment {
         final Spinner spin4 = (Spinner) view.findViewById(R.id.end_sigungu);
 
         layout_list = (ListView) view.findViewById(R.id.search_list);
-        layout_map = (FrameLayout) view.findViewById(R.id.map);
-
+        mapFragmentParent = view.findViewById(R.id.search_map);
         list_btn = (Button) view.findViewById(R.id.search_list_btn);
         map_btn = (Button) view.findViewById(R.id.search_map_btn);
         switch_btn = (Button) view.findViewById(R.id.switch_btn);
@@ -148,7 +145,6 @@ public class DriverSearchFragment extends Fragment {
         adspin3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spin3.setAdapter(adspin3);
         spin1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (adspin1.getItem(position).equals("시/도")) {
@@ -703,7 +699,6 @@ public class DriverSearchFragment extends Fragment {
                                 //연결 됐을 시 아래 List를 뿌려줘야함
                                 layout_list.setVisibility(View.VISIBLE);
 
-
                             } catch (NullPointerException ne) {
                                 ne.printStackTrace();
                             }
@@ -728,37 +723,22 @@ public class DriverSearchFragment extends Fragment {
                 org.sopt.yata.yata.ui.driver.MatchingListAdapter adapter = new org.sopt.yata.yata.ui.driver.MatchingListAdapter(mContext, driverListData);   //(context, layout resource, listObject)
                 layout_list.setAdapter(adapter);
                 //연결 됐을 시 아래 List를 뿌려줘야함
-                layout_map.setVisibility(View.GONE);
+                mapFragmentParent.setVisibility(View.GONE);
                 layout_list.setVisibility(View.VISIBLE);
             }
         });
 
+        /**
+         GoogleMap 관련 작업
+         */
         map_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mapFragmentParent.setVisibility(View.VISIBLE);
                 layout_list.setVisibility(View.GONE);
-                layout_map.setVisibility(View.VISIBLE);
 
-                FragmentManager fm = getChildFragmentManager();
-                mapFragment = (SupportMapFragment) fm.findFragmentById(map);
                 mapFragment = SupportMapFragment.newInstance();
-                fm.beginTransaction().replace(map, mapFragment).commit();
-
-                for (int i = 0; i < driverListData.size(); i++) {
-                    String saddr = driverListData.get(i).matching_saddr;
-                    Log.d("defef", "onClick: " + saddr);
-
-                    searchLocation(saddr);
-
-                    LatLng start_latlng = new LatLng(Double.parseDouble(slat), Double.parseDouble(slon));
-                    MarkerOptions startMarker = new MarkerOptions();
-                    startMarker.position(start_latlng)
-                            .title("출발지");
-                    gMap.addMarker(startMarker);
-
-                }
-                gc = new Geocoder(getContext(), Locale.KOREAN);
-
+                getFragmentManager().beginTransaction().replace(R.id.search_map, mapFragment).commit();
 
                 mapFragment.getMapAsync(new OnMapReadyCallback() {
                     @Override
@@ -767,18 +747,12 @@ public class DriverSearchFragment extends Fragment {
                         map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
                         try {
                             LatLng start_latlng = new LatLng(Double.parseDouble(slat), Double.parseDouble(slon));
-                            LatLng end_latlng = new LatLng(Double.parseDouble(elat), Double.parseDouble(elon));
                             MarkerOptions startMarker = new MarkerOptions();
                             startMarker.position(start_latlng)
                                     .title("출발지");
                             map.addMarker(startMarker);
-                            MarkerOptions endMarker = new MarkerOptions();
-                            endMarker.position(end_latlng)
-                                    .title("목적지");
-                            map.addMarker(endMarker);
-
                             map.moveCamera(CameraUpdateFactory.newLatLng(start_latlng));
-                            map.animateCamera(CameraUpdateFactory.zoomTo(10));
+                            map.animateCamera(CameraUpdateFactory.zoomTo(15));
                         } catch (NullPointerException ne) {
                             LatLng default_latlng = new LatLng(37.56, 126.97);
                             map.moveCamera(CameraUpdateFactory.newLatLng(default_latlng));
@@ -787,8 +761,26 @@ public class DriverSearchFragment extends Fragment {
                     }
                 });
 
+                if (driverListData != null)
+                    for (int i = 0; i < driverListData.size(); i++) {
+                        String saddr = driverListData.get(i).matching_saddr;
+                        Log.d("defef", "onClick: " + saddr);
+                        searchLocation(saddr);
+                        Log.d("slatslon", "onClick: slat/lon: " + slat + " / " + slon);
+                        if (gMap != null) {
+                            LatLng start_latlng = new LatLng(Double.parseDouble(slat), Double.parseDouble(slon));
+                            MarkerOptions startMarker = new MarkerOptions();
+                            startMarker.position(start_latlng)
+                                    .title("출발지");
+                            gMap.addMarker(startMarker);
+
+                        }
+
+                    }
+
             }
         });
+
         switch_btn.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -810,7 +802,10 @@ public class DriverSearchFragment extends Fragment {
                 }, 100);
             }
         });
+
+        mapFragmentParent.setVisibility(View.GONE);
     }
+    // OnViewCreated
 
     public View.OnClickListener clickEvent = new View.OnClickListener() {
         @Override
@@ -820,29 +815,23 @@ public class DriverSearchFragment extends Fragment {
 
             final DialogMiniDetail miniDetail = new DialogMiniDetail(mContext);
             miniDetail.show();
-
         }
     };
 
     private void searchLocation(String searchStr) {
         List<Address> addressList = null;
         try {
+            gc = new Geocoder(mContext);
+            addressList = gc.getFromLocationName(searchStr, 1);
+
             Log.d("driverList", "searchLocation: " + addressList);
-            addressList = gc.getFromLocationName(searchStr, 3);
 
             if (addressList != null) {
-                for (int i=0; i < addressList.size(); i++) {
-                    Address outAddr = addressList.get(i);
-                    int addrCount = outAddr.getMaxAddressLineIndex() + 1;
-                    StringBuffer outAddrStr = new StringBuffer();
-                    for (int k=0; k < addrCount; k++) {
-                        outAddrStr.append(outAddr.getAddressLine(k));
-                    }
-                    slat = outAddrStr.append(outAddr.getLatitude()).toString();
-                    slon = outAddrStr.append(outAddr.getLongitude()).toString();
 
-                    Log.d("location", "searchLocation: " + slat + " / " + slon);
-                }
+                slat = String.valueOf(addressList.get(0).getLatitude());
+                slon = String.valueOf(addressList.get(0).getLongitude());
+
+                Log.d("slatslon", "onClick: slat/lon: " + slat + " / " + slon);
             }
         } catch (IOException e) {
             Log.d("SampliLocationGeocoding", "Exception : " + getExitTransition().toString());
@@ -860,7 +849,6 @@ public class DriverSearchFragment extends Fragment {
                 Address address = addresses.get(0);
                 for (int i = 0; i < address.getMaxAddressLineIndex(); i++)
                     sb.append(address.getAddressLine(i)).append("");
-
                 //  sb.append(address.getCountryName()).append("");
                 // sb.append(address.getPostalCode()).append("");
                 sb.append(address.getLocality()).append(" ");//시

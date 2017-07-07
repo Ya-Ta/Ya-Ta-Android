@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="221dp"
-    android:layout_height="419dp"
+    android:layout_height="404dp"
     android:layout_gravity="left|center_vertical"
     android:orientation="vertical"
     android:background="@drawable/background_rounded_transparent">
@@ -31,7 +31,7 @@
             android:layout_marginBottom="10dp"
             android:textSize="14sp"
             android:text="OWNER"
-            android:textStyle="bold"
+            android:textColor="#ffffff"
             android:id="@+id/textView6" />
     </RelativeLayout>
 
@@ -52,7 +52,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="출발지"
-            android:textStyle="bold"
+            android:textColor="#ffffff"
             android:textSize="12sp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="25dp"/>
@@ -60,6 +60,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=":"
+            android:textColor="#FFFFFF"
             android:textSize="12sp"
             android:layout_marginRight="25dp"/>
 
@@ -67,7 +68,7 @@
             android:id="@+id/owner_detail_start"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#40ffffff"
+            android:textColor="#BFFFFFFF"
             android:textSize="12sp"/>
 
     </LinearLayout>
@@ -83,7 +84,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:text="도착지"
-            android:textStyle="bold"
+            android:textColor="#fff"
             android:textSize="12sp"
             android:layout_marginRight="25dp"/>
 
@@ -91,6 +92,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=":"
+            android:textColor="#FFFFFF"
             android:textSize="12sp"
             android:layout_marginRight="25dp"/>
 
@@ -98,7 +100,7 @@
             android:id="@+id/owner_detail_end"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#40ffffff"
+            android:textColor="#BFFFFFFF"
             android:textSize="12sp"/>
 
     </LinearLayout>
@@ -121,12 +123,13 @@
             android:layout_marginLeft="10dp"
             android:textSize="12sp"
             android:text="이름"
-            android:textStyle="bold"
+            android:textColor="#ffffff"
             android:layout_marginRight="36dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=":"
+            android:textColor="#FFFFFF"
             android:textSize="12sp"
             android:layout_marginRight="25dp"/>
 
@@ -135,7 +138,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="12sp"
-            android:textColor="#40ffffff"/>
+            android:textColor="#BFFFFFFF"/>
 
     </LinearLayout>
 
@@ -150,13 +153,14 @@
             android:text="나이"
             android:layout_marginLeft="10dp"
             android:textSize="12sp"
-            android:textStyle="bold"
+            android:textColor="#ffffff"
             android:layout_marginRight="36dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=":"
+            android:textColor="#FFFFFF"
             android:textSize="12sp"
             android:layout_marginRight="25dp"/>
 
@@ -165,7 +169,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="12sp"
-            android:textColor="#40ffffff"
+            android:textColor="#BFFFFFFF"
             />
 
     </LinearLayout>
@@ -178,7 +182,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="평점"
-            android:textStyle="bold"
+            android:textColor="#ffffff"
             android:textSize="12sp"
             android:layout_marginRight="36dp"
             android:layout_marginLeft="10dp"/>
@@ -186,6 +190,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=":"
+            android:textColor="#FFFFFF"
             android:textSize="12sp"
             android:layout_marginRight="25dp"/>
         <TextView
@@ -193,7 +198,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="12sp"
-            android:textColor="#40ffffff"
+            android:textColor="#BFFFFFFF"
      />
 
     </LinearLayout>
@@ -210,13 +215,14 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="25dp"
             android:text="동행객"
-            android:textStyle="bold"
+            android:textColor="#ffffff"
             android:textSize="12sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=":"
+            android:textColor="#FFFFFF"
             android:textSize="12sp"
             android:layout_marginRight="25dp"/>
 
@@ -224,7 +230,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="12sp"
-            android:textColor="#40ffffff"
+            android:textColor="#BFFFFFFF"
             android:id="@+id/owner_detail_with"/>
 
     </LinearLayout>
@@ -239,12 +245,13 @@
             android:text="차량정보"
             android:layout_marginLeft="10dp"
             android:textSize="12sp"
-            android:textStyle="bold"
+            android:textColor="#ffffff"
             android:layout_marginRight="14dp" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=":"
+            android:textColor="#FFFFFF"
             android:textSize="12sp"
             android:layout_marginRight="25dp"/>
 
@@ -253,7 +260,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="12sp"
-            android:textColor="#40ffffff"/>
+            android:textColor="#BFFFFFFF"/>
 
     </LinearLayout>
     <View
@@ -269,7 +276,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"
-        android:textStyle="bold"
+        android:textColor="#ffffff"
         android:textSize="12sp"/>
 
     <TextView
@@ -277,19 +284,20 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="18dp"
         android:textSize="8sp"
+        android:lines="2"
         android:layout_marginBottom="10dp"
-        android:textColor="#40ffffff"
+        android:textColor="#BFFFFFFF"
         android:id="@+id/owner_detail_message"/>
 
     <Button
         android:id="@+id/owner_detail_cancel"
         android:layout_width="110dp"
-        android:layout_height="60dp"
+        android:layout_height="40dp"
         android:layout_marginBottom="15dp"
         android:layout_gravity="center"
-        android:gravity="center_horizontal"
-        android:text="
- 매칭신청"
-        android:background="@drawable/blue_button"/>
+        android:gravity="center"
+        android:textSize="15sp"
+        android:text="매칭신청"
+        android:background="@drawable/bluebutton"/>
 
 </LinearLayout>

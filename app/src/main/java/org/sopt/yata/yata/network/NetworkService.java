@@ -28,21 +28,6 @@ import retrofit2.http.Path;
  */
 
 public interface NetworkService {
-    //    @GET("/lists")
-//    Call<MainResult> getMainResult();
-//
-//    @GET("/lists/{id}")
-//    Call<DetailResult> getDetailResult(@Path("id") String id);
-//
-//    @POST("/lists/{id}")
-//    Call<CommentResult> getCommentResult(@Path("id") , @Body); ///Path 넘길 변수 Body 파일을 넘길 때는 멀티파트 텍스트만 넘길 때는 객체를 보냅니다!!
-//
-//    @Multipart
-//    @POST("/lists")
-//    Call<RegisterResult> registerImgNotice(@Part MultipartBody.Part file,
-//                                           @Part("writer") RequestBody writer,
-//                                           @Part("title") RequestBody title,
-//                                           @Part("content") RequestBody contents);
     @GET("user/login")
     Call<LoginResult> getLoginResult(@Body LoginResult loginResult);
 
@@ -85,6 +70,5 @@ public interface NetworkService {
 
     @GET("owner/match/detail/{applying_idx}")
     Call<CurrentDriverListDetailResult> getCurrentDriverDetailResult(@Path("applying_idx") int applying_idx, @Header("token") String token);
-
 
 }

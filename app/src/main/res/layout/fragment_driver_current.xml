@@ -1,18 +1,81 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:orientation="vertical"
-android:layout_height="match_parent">
-
-<TextView
-    android:id="@+id/section_label"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:textColor="@color/colorMainBlue"/>
-
-<ListView
-    android:id="@+id/list_matching"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"/>
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="19dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="20dp"
+            android:text="차주 신청 현황"
+            android:textSize="15dp"
+            android:textColor="#000"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="32dp"
+                android:layout_marginRight="16dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="14dp"
+                android:background="#000000"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="13dp"
+                android:text="현재 운전자분이 매칭을 시도한 차주 현황입니다."
+                android:textSize="8dp"
+                android:textColor="#000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt1"
+                android:layout_marginBottom="14dp"
+                android:text="차주의 프로필을 클릭해서 상세정보를 확인해 보세요."
+                android:textSize="8dp"
+                android:textColor="#000"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+    <ImageView
+        android:layout_width="800dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/blueline"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="-40dp"
+        android:layout_marginTop="-10dp"/>
+    <TextView
+        android:id="@+id/section_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorMainBlue"/>
+
+    <ListView
+        android:id="@+id/list_matching"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-30dp"/>
 
 </LinearLayout>

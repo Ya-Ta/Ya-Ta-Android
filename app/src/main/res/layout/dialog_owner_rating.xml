@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="271dp"
+    android:layout_height="220dp"
+    android:layout_gravity="center"
+    android:background="@drawable/background_dialog"
+    android:paddingLeft="25dp"
+    android:paddingRight="25dp"
+    android:paddingBottom="15dp"
+    android:paddingTop="20dp"
+    >
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="차주 평가"
+        android:textColor="#fff"
+        android:textSize="15sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="92dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/text3"
+        android:src="@drawable/profile_driver"
+        android:id="@+id/driver_rating_img"/>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="63dp"
+        android:layout_marginLeft="30dp"
+        android:layout_toEndOf="@id/driver_rating_img"
+        android:gravity="center_vertical"
+        android:id="@+id/layout4">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="15sp"
+            android:textColor="#fff"
+            android:layout_height="wrap_content"
+            android:id="@+id/driver_rating_name"
+            android:text="차주"/>
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:numStars="5"
+            android:max="5"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_marginTop="5dp"
+            android:isIndicator="false"
+            android:layout_below="@id/driver_rating_name"
+            android:stepSize="1"
+            />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/driver_rating_fin"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:text="평가완료"
+        android:background="@drawable/bluebutton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

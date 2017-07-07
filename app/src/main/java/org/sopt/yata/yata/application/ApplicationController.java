@@ -6,6 +6,8 @@ package org.sopt.yata.yata.application;
 
 import android.app.Application;
 
+import com.tsengvn.typekit.Typekit;
+
 import org.sopt.yata.yata.network.NetworkService;
 
 import retrofit2.Retrofit;
@@ -40,6 +42,7 @@ public class ApplicationController extends Application {
 
         ApplicationController.instance = this; //인스턴스 객체 초기화
         buildService();
+        applyFont();
     }
 
     public void buildService() {
@@ -50,5 +53,11 @@ public class ApplicationController extends Application {
                 .build();
 
         networkService = retrofit.create(NetworkService.class);
+    }
+
+    private void applyFont(){
+        Typekit.getInstance()
+                .addNormal(Typekit.createFromAsset(this, "NanumSquareR.ttf"))
+                .addBold(Typekit.createFromAsset(this, "nanumsquareb.ttf"));
     }
 }

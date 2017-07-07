@@ -103,6 +103,7 @@ public class DriverListAdapter extends BaseAdapter {
         final MatchingResultListData curData = getItem(position);
 
         user_name = curData.user_name;
+        //TODO created_at 시간 짜르기 / 레이아웃 조절
         applying_created_at = curData.applying_created_at;
         applying_message = curData.applying_message;
         applying_idx = curData.applying_idx;

@@ -5,7 +5,7 @@
     <corners android:radius="5dip" />
     <solid android:color="#efefef" />
     <stroke android:width="5dp"
-        android:color="#0054FF"/>
+        android:color="#0B5EC4"/>
 </shape>
 </item>
 </layer-list>

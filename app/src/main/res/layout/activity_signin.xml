@@ -92,7 +92,7 @@
         android:layout_height="15dp"
         android:layout_gravity="center"
         android:layout_marginTop="25dp"
-        android:background="#f7f7f7"
+        android:background="@null"
         android:text="forget your ID / PASSWORD ?"
         android:textColor="#000000"
         android:textSize="13sp" />

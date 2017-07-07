@@ -41,9 +41,6 @@ public class Driver_RecyclerAdapter extends RecyclerView.Adapter<MyViewHolder> {
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         holder.VH_main_title.setText(searchDatas.get(position).user_name);
-//        holder.VH_main_writer.setText(searchDatas.get(position).writer);
-//        holder.VH_main_count.setText(searchDatas.get(position).view_number + ""); //조회수
-//        holder.VH_main_date.setText(searchDatas.get(position).written_time); //작성
     }
 
     @Override

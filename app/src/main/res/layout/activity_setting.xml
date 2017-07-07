@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:background="@color/colorBackground"
+    android:orientation="vertical">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBackground"
+    android:layout_marginBottom="60dp">
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
         android:background="@color/colorBackground"
         android:orientation="vertical">
 
@@ -61,7 +70,6 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_below="@id/settings_version"
-                android:layout_marginBottom="15dp"
                 android:layout_marginTop="10dp"
                 android:src="@drawable/more" />
         </RelativeLayout>
@@ -330,3 +338,23 @@
 
     </LinearLayout>
 </ScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-12dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/belowbox"
+            android:scaleX="1.5" />
+
+        <ImageView
+            android:layout_width="123dp"
+            android:layout_height="19dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="34dp"
+            android:src="@drawable/belowtext_justride" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -3,13 +3,13 @@ package org.sopt.yata.yata.ui.common;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import org.sopt.yata.yata.R;
 import org.sopt.yata.yata.application.ApplicationController;
+import org.sopt.yata.yata.application.YaTaActivity;
 import org.sopt.yata.yata.network.NetworkService;
 
 import butterknife.ButterKnife;
@@ -18,7 +18,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class SigninActivity extends AppCompatActivity {
+public class SigninActivity extends YaTaActivity {
     LoginInfo loginInfo;
     LoginResult loginResult;
 

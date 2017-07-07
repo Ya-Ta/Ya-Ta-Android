@@ -20,4 +20,6 @@ public class MatchingData{
 
     public String applying_created_at;
     public String applying_message;
+
+    public int matching_type;
 }

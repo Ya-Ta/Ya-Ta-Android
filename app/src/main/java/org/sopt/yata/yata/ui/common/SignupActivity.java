@@ -2,7 +2,6 @@ package org.sopt.yata.yata.ui.common;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
@@ -12,6 +11,7 @@ import android.widget.Toast;
 
 import org.sopt.yata.yata.R;
 import org.sopt.yata.yata.application.ApplicationController;
+import org.sopt.yata.yata.application.YaTaActivity;
 import org.sopt.yata.yata.network.NetworkService;
 
 import retrofit2.Call;
@@ -22,7 +22,7 @@ import retrofit2.Response;
  * Created by yeonjin on 2017-06-27.
  */
 
-public class SignupActivity extends AppCompatActivity implements View.OnClickListener {
+public class SignupActivity extends YaTaActivity implements View.OnClickListener {
 
     private EditText id_edit, name_edit, pw_edit, pwre_edit, mail_edit;
     private Button join_btn, login_btn;

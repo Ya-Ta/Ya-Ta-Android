@@ -77,7 +77,6 @@ public class DriverCurrentFragment extends Fragment {
         SharedPreferences user_idx = activity.getSharedPreferences("userIdx", MODE_PRIVATE);
         index = user_idx.getInt("userIdx", 0);
         Log.d("KOO", "onCreateView: INDEX: " + index);
-
         Log.d("KOO", "search: " + sloc + " / " + eloc);
 
         search(index);
@@ -91,8 +90,8 @@ public class DriverCurrentFragment extends Fragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-//        ((TextView)view.findViewById(R.id.section_label)).setText("current");
         ((ListView)view.findViewById(list_matching)).setAdapter(adapter);
+
     }
 
     public void search(int index){
@@ -111,7 +110,8 @@ public class DriverCurrentFragment extends Fragment {
                         matchingResultListDatas = response.body().result;
                         Log.d("KOO", "matchingResultListDatas: in Driver: " + matchingResultListDatas);
 
-                        OwnerListAdapter resultAdapter = new OwnerListAdapter(context, matchingResultListDatas); // 마지막 0 은 쓰레기값 : 생상자 오버로딩을 위해
+
+                        OwnerListAdapter resultAdapter = new OwnerListAdapter(context, matchingResultListDatas);
                         matchingList.setAdapter(resultAdapter);
 
                     }catch(NullPointerException ne){
