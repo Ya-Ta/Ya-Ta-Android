@@ -74,8 +74,6 @@ public class OwnerCurrentFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         ((ListView)view.findViewById(list_matching)).setAdapter(adapter);
 
-
-
     }
 
     public void search(int index){
@@ -93,6 +91,7 @@ public class OwnerCurrentFragment extends Fragment {
 
                         DriverListAdapter resultAdapter = new DriverListAdapter(context, matchingResultListDatas);
                         receivedList.setAdapter(resultAdapter);
+
 
                     }catch(NullPointerException ne){
                         ne.printStackTrace();

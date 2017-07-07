@@ -10,6 +10,7 @@ import org.sopt.yata.yata.ui.common.RegisterResult;
 import org.sopt.yata.yata.ui.driver.CurrentOwnerListResult;
 import org.sopt.yata.yata.ui.driver.DriverApplyOwnerResult;
 import org.sopt.yata.yata.ui.driver.Message;
+import org.sopt.yata.yata.ui.owner.CurrentDriverListDetailResult;
 import org.sopt.yata.yata.ui.owner.CurrentDriverListResult;
 import org.sopt.yata.yata.ui.owner.OwnerInfo;
 import org.sopt.yata.yata.ui.owner.OwnerResult;
@@ -81,6 +82,9 @@ public interface NetworkService {
 
     @GET("owner")
     Call<OwnerStatusResult> getOwnerStatus(@Header("token") String token);
+
+    @GET("owner/match/detail/{applying_idx}")
+    Call<CurrentDriverListDetailResult> getCurrentDriverDetailResult(@Path("applying_idx") int applying_idx, @Header("token") String token);
 
 
 }

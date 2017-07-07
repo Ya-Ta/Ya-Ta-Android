@@ -75,7 +75,6 @@ public class ProfileFragment extends Fragment {
         Call<ProfileResult> requestProfile = networkService.getProfileFragment(token);
         Log.d("dipAngry", "onClick: networkService: " + requestProfile);
         requestProfile.enqueue(new Callback<ProfileResult>(){
-
             @Override
             public void onResponse(Call<ProfileResult> call, Response<ProfileResult> response) {
                 Log.d("dipAngry", "profile response.isSuccessful(): " + response.isSuccessful());

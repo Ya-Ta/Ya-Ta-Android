@@ -40,7 +40,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
         mail_edit = (EditText)findViewById(R.id.mail_edit);
 
         join_btn = (Button)findViewById(R.id.join_btn);
-        login_btn = (Button)findViewById(R.id.login_btn);
+        login_btn = (Button)findViewById(R.id.textView5);
         join_btn.setOnClickListener(this);
         login_btn.setOnClickListener(this);
     }
@@ -116,7 +116,8 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                 }
                 break;
 
-            case R.id.login_btn:
+            case R.id.textView5:
+                finish();
                 Intent intent = new Intent(this, SigninActivity.class);
                 startActivity(intent);
                 break;

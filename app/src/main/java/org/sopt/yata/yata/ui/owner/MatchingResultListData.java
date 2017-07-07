@@ -9,4 +9,5 @@ public class MatchingResultListData {
     public String applying_message;
     public String user_name;
     public String user_img;
+    public int applying_idx;
 }

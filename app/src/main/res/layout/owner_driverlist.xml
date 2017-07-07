@@ -2,16 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="110dp"
+    android:layout_height="74dp"
     android:gravity="center"
     android:orientation="horizontal"
-    android:padding="5dp">
+    android:paddingLeft="10dp"
+    android:paddingRight="8dp"
+    android:layout_marginBottom="22dp">
 
-    <org.sopt.yata.yata.custom_views.CircleImageView
+    <ImageView
         android:id="@+id/image_profile"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:src="@drawable/avatar"/>
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/yata_insurance"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,19 +32,27 @@
                 android:id="@+id/text_user_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="3dp"
-                android:textSize="18sp"
+                android:layout_marginTop="14dp"
+                android:layout_marginRight="10dp"
+                android:textSize="14sp"
                 android:text="운전자"
                 android:textColor="#000"/>
-            <android.support.v4.widget.Space
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="야타보험 가입자"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="106dp"
+                android:textSize="8sp"
+                android:textColor="#0B5EC4"/>
             <TextView
                 android:id="@+id/text_created_time"
-                android:layout_width="150dp"
-                android:layout_height="40dp"
-                android:textColor="#000"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:textSize="7sp"
+                android:layout_marginTop="10dp"
                 android:text="작성 시간"/>
 
         </LinearLayout>

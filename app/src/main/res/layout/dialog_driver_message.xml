@@ -2,22 +2,33 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="282dp"
-    android:layout_height="300dp"
+    android:layout_width="272dp"
+    android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:background="#000000"
-    android:orientation="vertical"
-    >
-
+    android:background="@drawable/background_dialog"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
     <Button
         android:id="@+id/driver_message_close"
         android:layout_width="15dp"
         android:layout_height="15dp"
-        android:layout_alignParentEnd="true"
         android:layout_margin="10dp"
-        android:background="@drawable/cancelbutton"
-        android:layout_gravity="right"
-        android:textSize="25dp" />
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/cancelbutton"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="110dp"
+            android:textSize="12sp"
+            android:text="정보입력"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+    </LinearLayout>
 
     <View
         android:layout_width="wrap_content"
@@ -32,13 +43,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:padding="20dp">
+        android:paddingLeft="20dp"
+        android:paddingRight="10dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp">
 
 
         <ImageView
             android:id="@+id/img_with"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
             android:layout_centerVertical="true"
             android:src="@drawable/personnumber" />
 
@@ -48,34 +62,30 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
-            android:layout_marginStart="9dp"
             android:layout_toEndOf="@+id/img_with"
+            android:textSize="12dp"
             android:text="동행객" />
 
         <Button
-            android:id="@+id/plus_btn"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
+            android:id="@+id/minus_btn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_alignParentEnd="true"
-            android:background="@drawable/button_round"
+            android:background="@drawable/minus"
             android:gravity="center"
-            android:text="+"
-            android:textColor="#ffffff"
-            android:textSize="15dp" />
+            />
 
 
         <Button
-            android:id="@+id/minus_btn"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
+            android:id="@+id/plus_btn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_alignParentTop="true"
             android:layout_marginRight="10dp"
-            android:layout_toStartOf="@+id/plus_btn"
-            android:background="@drawable/button_round"
+            android:layout_toStartOf="@+id/minus_btn"
+            android:background="@drawable/plus"
             android:gravity="center"
-            android:text="-"
-            android:textColor="#ffffff"
-            android:textSize="15dp" />
+             />
 
 
         <TextView
@@ -84,9 +94,9 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginRight="20dp"
-            android:layout_toStartOf="@+id/minus_btn"
+            android:layout_toStartOf="@+id/plus_btn"
             android:text=" 명"
-            android:textSize="15dp" />
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/textView_companion"
@@ -95,7 +105,7 @@
             android:layout_centerVertical="true"
             android:layout_toStartOf="@id/text"
             android:text="0"
-            android:textSize="15dp" />
+            android:textSize="12sp" />
     </RelativeLayout>
 
     <View
@@ -111,34 +121,38 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="20dp">
+        android:layout_marginBottom="17dp"
+        >
 
         <ImageView
+            android:layout_margin="20dp"
             android:id="@+id/img_msg"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
             android:src="@drawable/message"
             />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="20dp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="-10dp"
             android:gravity="center_vertical"
             android:text="메시지"
+            android:textSize="12sp"
             android:layout_toEndOf="@id/img_msg"/>
         <EditText
             android:id="@+id/edit_msg"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="226dp"
+            android:layout_height="75dp"
             android:layout_below="@id/img_msg"
-            android:layout_marginTop="10dp"
-            android:textSize="12dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="10sp"
+            android:textColor="#66ffffff"
             android:hint="전하고 싶은 메시지를 입력하세요."
+            android:background="@null"
             android:lines="3"
             android:scrollbars="none"
-            android:maxLines="3"
-            android:minLines="3"
             />
     </RelativeLayout>
 
@@ -149,6 +163,7 @@
         android:text="신청하기"
         android:textColor="#ffffff"
         android:textSize="15sp"
+        android:layout_marginBottom="15dp"
         android:background="@drawable/button_round_gradation"
         android:layout_gravity="center"
         android:layout_centerHorizontal="true" />

@@ -22,7 +22,7 @@ public class CustomAdapter extends PagerAdapter {
 
     @Override
     public int getCount() {
-        return 3; //그림 3개
+        return 4; //그림 3개
     }
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {

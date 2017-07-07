@@ -11,22 +11,23 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="95dp"
             android:orientation="horizontal"
-            android:layout_weight="2">
+            >
             <!--렐러티브로 출발, 도착지 설정 -->
             <RelativeLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:background="@drawable/search_border_rounded">
+                android:background="@drawable/search_border_rounded"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
                 <!--이미지뷰2, 에디트텍스트2, 뷰(출발 도착 사이 선) -->
                 <View
                     android:id="@+id/standard"
-                    android:layout_width="match_parent"
+                    android:layout_width="250dp"
                     android:layout_height="1dip"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="60dp"
                     android:background="#000000" />
 
                 <View
@@ -35,23 +36,24 @@
                     android:layout_height="match_parent"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="60dp"
-                    android:background="#000000"
-                    />
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="#000000" />
 
                 <ImageView
                     android:id="@+id/leftImg"
-                    android:layout_width="40dp"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/location_search" />
 
                 <Spinner
                     android:id="@+id/start_sido"
                     android:layout_width="130dp"
                     android:layout_height="match_parent"
-                    android:layout_above="@+id/standard"
-                    android:layout_toRightOf="@+id/leftImg"
+                    android:layout_alignBottom="@+id/standard"
+                    android:layout_toEndOf="@id/leftImg"
+                    android:layout_marginLeft="10dp"
                     android:gravity="center"
                     android:text="시/도"
                     android:textAlignment="center"
@@ -59,10 +61,12 @@
 
                 <Spinner
                     android:id="@+id/start_sigungu"
-                    android:layout_width="140dp"
+                    android:layout_width="130dp"
                     android:layout_height="match_parent"
-                    android:layout_above="@+id/standard"
-                    android:layout_toRightOf="@+id/standard2"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignBottom="@+id/standard"
+                    android:layout_toRightOf="@id/start_sido"
+                    android:layout_marginLeft="15dp"
                     android:gravity="center"
                     android:text="시/군/구"
                     android:textAlignment="center"
@@ -73,7 +77,8 @@
                     android:layout_width="130dp"
                     android:layout_height="match_parent"
                     android:layout_below="@+id/standard"
-                    android:layout_toRightOf="@+id/leftImg"
+                    android:layout_toEndOf="@id/leftImg"
+                    android:layout_marginLeft="10dp"
                     android:gravity="center"
                     android:text="시/도"
                     android:textAlignment="center"
@@ -81,10 +86,11 @@
 
                 <Spinner
                     android:id="@+id/end_sigungu"
-                    android:layout_width="140dp"
+                    android:layout_width="130dp"
                     android:layout_height="match_parent"
                     android:layout_below="@+id/standard"
-                    android:layout_toRightOf="@+id/standard2"
+                    android:layout_toRightOf="@id/start_sido"
+                    android:layout_marginLeft="15dp"
                     android:gravity="center"
                     android:text="시/군/구"
                     android:textAlignment="center"
@@ -92,16 +98,18 @@
 
                 <Button
                     android:id="@+id/switch_btn"
-                    android:layout_width="40dp"
-                    android:layout_height="match_parent"
-                    android:layout_toRightOf="@+id/standard" />
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/change"
+                    android:gravity="right" />
             </RelativeLayout>
         </LinearLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="8">
+            android:layout_height="wrap_content">
 
             <FrameLayout
                 android:id="@+id/search_map"
@@ -116,29 +124,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:visibility="visible"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="50dp"
                 />
 
 
         </RelativeLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </LinearLayout>
-
-    </LinearLayout>
-    <RelativeLayout
+   </LinearLayout>
+    <Button
         android:id="@+id/searchbtn"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="85dp"
+        android:layout_marginTop="73dp"
         android:background="@drawable/button_search"
-        ></RelativeLayout>
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"></Button>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-40dp"
+        android:layout_marginLeft="-40dp"
+        android:layout_marginRight="-40dp"
+        android:src="@drawable/belowbox"/>
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

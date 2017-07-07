@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="360dp"
     android:layout_height="600dp"
-    android:background="#77000000"
+    android:background="#CC000000"
     >
     <ImageView
         android:layout_width="wrap_content"

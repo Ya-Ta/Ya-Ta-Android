@@ -5,7 +5,6 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -27,8 +26,6 @@ public class SigninActivity extends AppCompatActivity {
     EditText edit_id;
     EditText edit_passwd;
 
-    Button backdoor;
-
     NetworkService networkService;
 
     @Override
@@ -44,13 +41,7 @@ public class SigninActivity extends AppCompatActivity {
         //뷰 객체 초기화
         edit_id = (EditText) findViewById(R.id.edit_id);
         edit_passwd = (EditText) findViewById(R.id.edit_passwd);
-        backdoor = (Button) findViewById(R.id.backdoor_button);
 
-    }
-
-    @OnClick(R.id.backdoor_button)
-    public void backdoorClick(){
-        startActivity(new Intent(getApplicationContext(), MainActivity.class));
     }
 
     @OnClick(R.id.login_button)

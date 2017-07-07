@@ -1,42 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="221dp"
+    android:layout_height="419dp"
     android:layout_gravity="left|center_vertical"
     android:orientation="vertical"
     android:background="@drawable/background_rounded_transparent">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <Button
+        <ImageButton
             android:id="@+id/cancel_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="0dp"
-            android:layout_marginLeft="180dp"
-            android:layout_marginTop="10dp"
-            android:text="X"
-            android:textSize="25dp"
-            android:background="#00ff0000"/>
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp"
+            android:background="@drawable/cancelbutton"/>
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_margin="20dp"
-            android:id="@+id/owner_detail_img"/>
+            android:layout_margin="10dp"
+            android:id="@+id/owner_detail_img"
+            android:src="@drawable/owner_profile"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/owner_detail_img"
-            android:layout_marginTop="100dp"
-            android:layout_marginLeft="20dp"
-            android:textSize="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="96dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="14sp"
             android:text="OWNER"
+            android:textStyle="bold"
             android:id="@+id/textView6" />
     </RelativeLayout>
 
     <View
-        android:layout_width="240dp"
+        android:id="@+id/line1"
+        android:layout_width="201dp"
         android:layout_height="1dp"
         android:background="#FFFFFF"
         android:layout_below="@id/owner_detail_img"/>
@@ -45,19 +46,29 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="5dp"
         android:orientation="horizontal">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="출발지             :"
-            android:layout_marginLeft="15dp" />
+            android:text="출발지"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="25dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":"
+            android:textSize="12sp"
+            android:layout_marginRight="25dp"/>
 
         <TextView
             android:id="@+id/owner_detail_start"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp" />
+            android:textColor="#40ffffff"
+            android:textSize="12sp"/>
 
     </LinearLayout>
 
@@ -70,59 +81,91 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/line6"
-            android:layout_marginLeft="15dp"
-            android:text="도착지             :" />
+            android:layout_marginLeft="10dp"
+            android:text="도착지"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:layout_marginRight="25dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":"
+            android:textSize="12sp"
+            android:layout_marginRight="25dp"/>
 
         <TextView
             android:id="@+id/owner_detail_end"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp" />
+            android:textColor="#40ffffff"
+            android:textSize="12sp"/>
 
     </LinearLayout>
 
     <View
-        android:layout_width="240dp"
+        android:layout_width="201dp"
         android:layout_height="1dp"
         android:background="#FFFFFF"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_marginBottom="5dp"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="이름                :"
-            android:layout_marginLeft="15dp"/>
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="12sp"
+            android:text="이름"
+            android:textStyle="bold"
+            android:layout_marginRight="36dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":"
+            android:textSize="12sp"
+            android:layout_marginRight="25dp"/>
+
+        <TextView
             android:id="@+id/owner_detail_name"
-            />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#40ffffff"/>
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="5dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="나이                :"
-            android:layout_marginLeft="15dp"/>
+            android:text="나이"
+            android:layout_marginLeft="10dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginRight="36dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":"
+            android:textSize="12sp"
+            android:layout_marginRight="25dp"/>
 
         <TextView
             android:id="@+id/owner_detail_age"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:textSize="12sp"
+            android:textColor="#40ffffff"
             />
 
     </LinearLayout>
@@ -130,36 +173,58 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="5dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="평점                :"
-            android:layout_marginLeft="15dp"/>
-
+            android:text="평점"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:layout_marginRight="36dp"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":"
+            android:textSize="12sp"
+            android:layout_marginRight="25dp"/>
         <TextView
             android:id="@+id/owner_detail_point"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"/>
+            android:textSize="12sp"
+            android:textColor="#40ffffff"
+     />
 
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="5dp">
+
         <TextView
+            android:id="@+id/textView20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="동행객             :"
-            android:layout_marginLeft="15dp"
-            android:layout_below="@+id/line6" />
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="25dp"
+            android:text="동행객"
+            android:textStyle="bold"
+            android:textSize="12sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:text=":"
+            android:textSize="12sp"
+            android:layout_marginRight="25dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#40ffffff"
             android:id="@+id/owner_detail_with"/>
 
     </LinearLayout>
@@ -171,19 +236,28 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="차량정보          :"
-            android:layout_marginLeft="15dp"
-            android:layout_below="@+id/line6" />
+            android:text="차량정보"
+            android:layout_marginLeft="10dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginRight="14dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":"
+            android:textSize="12sp"
+            android:layout_marginRight="25dp"/>
 
         <TextView
             android:id="@+id/owner_detail_car"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"/>
+            android:textSize="12sp"
+            android:textColor="#40ffffff"/>
 
     </LinearLayout>
     <View
-        android:layout_width="240dp"
+        android:layout_width="201dp"
         android:layout_height="1dp"
         android:background="#FFFFFF"
         android:layout_below="@id/owner_detail_img"/>
@@ -194,24 +268,28 @@
         android:text="메세지"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-        android:layout_marginLeft="15dp"
-        android:layout_below="@+id/line6" />
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:textSize="12sp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="18dp"
-        android:textSize="10dp"
-        android:layout_marginBottom="15dp"
+        android:textSize="8sp"
+        android:layout_marginBottom="10dp"
+        android:textColor="#40ffffff"
         android:id="@+id/owner_detail_message"/>
 
     <Button
         android:id="@+id/owner_detail_cancel"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="매칭신청"
+        android:layout_width="110dp"
+        android:layout_height="60dp"
         android:layout_marginBottom="15dp"
-        android:background="@drawable/button_round_gradation"/>
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:text="
+ 매칭신청"
+        android:background="@drawable/blue_button"/>
 
 </LinearLayout>
