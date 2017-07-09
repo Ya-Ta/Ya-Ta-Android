@@ -24,7 +24,7 @@ import retrofit2.Response;
 
 public class SignupActivity extends YaTaActivity implements View.OnClickListener {
 
-    private EditText id_edit, name_edit, pw_edit, pwre_edit, mail_edit;
+    private EditText id_edit, name_edit, pw_edit, pwre_edit, mail_edit, phone_edit;
     private Button join_btn, login_btn;
 
     NetworkService networkService;
@@ -38,6 +38,7 @@ public class SignupActivity extends YaTaActivity implements View.OnClickListener
         pw_edit = (EditText)findViewById(R.id.pw_edit);
         pwre_edit = (EditText)findViewById(R.id.pwre_edit);
         mail_edit = (EditText)findViewById(R.id.mail_edit);
+        phone_edit = (EditText)findViewById(R.id.phone_edit);
 
         join_btn = (Button)findViewById(R.id.join_btn);
         login_btn = (Button)findViewById(R.id.textView5);
@@ -84,7 +85,7 @@ public class SignupActivity extends YaTaActivity implements View.OnClickListener
                     registerInfo.pw2 = pwre_edit.getText().toString();
                     registerInfo.name = name_edit.getText().toString();
                     registerInfo.email = mail_edit.getText().toString();
-//                    registerInfo.phone = phone_edit.getText().toString();
+                    registerInfo.phone = phone_edit.getText().toString();
 
                     networkService = ApplicationController.getInstance().getNetworkService();
                     Log.d("Taehyung", "networkService: " + networkService);

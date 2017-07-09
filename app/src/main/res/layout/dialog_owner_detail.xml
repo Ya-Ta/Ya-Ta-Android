@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="221dp"
-    android:layout_height="404dp"
+    android:layout_height="wrap_content"
     android:layout_gravity="left|center_vertical"
     android:orientation="vertical"
     android:background="@drawable/background_rounded_transparent">
@@ -295,6 +295,7 @@
         android:layout_height="40dp"
         android:layout_marginBottom="15dp"
         android:layout_gravity="center"
+        android:textColor="#fff"
         android:gravity="center"
         android:textSize="15sp"
         android:text="매칭신청"

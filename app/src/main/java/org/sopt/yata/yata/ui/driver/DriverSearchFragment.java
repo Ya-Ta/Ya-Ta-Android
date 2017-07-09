@@ -18,6 +18,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -95,6 +96,7 @@ public class DriverSearchFragment extends Fragment {
     String elat;
     String elon;
 
+    ImageView img_listmap;
 
     public Activity activity;
 
@@ -125,6 +127,7 @@ public class DriverSearchFragment extends Fragment {
         list_btn = (Button) view.findViewById(R.id.search_list_btn);
         map_btn = (Button) view.findViewById(R.id.search_map_btn);
         switch_btn = (Button) view.findViewById(R.id.switch_btn);
+        img_listmap = (ImageView) view.findViewById(R.id.img_listmap);
 
         SharedPreferences user_token = activity.getSharedPreferences("usertoken", MODE_PRIVATE);
         token = user_token.getString("token", null);
@@ -723,6 +726,7 @@ public class DriverSearchFragment extends Fragment {
                 org.sopt.yata.yata.ui.driver.MatchingListAdapter adapter = new org.sopt.yata.yata.ui.driver.MatchingListAdapter(mContext, driverListData);   //(context, layout resource, listObject)
                 layout_list.setAdapter(adapter);
                 //연결 됐을 시 아래 List를 뿌려줘야함
+                img_listmap.setImageResource(R.drawable.list_select);
                 mapFragmentParent.setVisibility(View.GONE);
                 layout_list.setVisibility(View.VISIBLE);
             }
@@ -736,6 +740,8 @@ public class DriverSearchFragment extends Fragment {
             public void onClick(View v) {
                 mapFragmentParent.setVisibility(View.VISIBLE);
                 layout_list.setVisibility(View.GONE);
+
+                img_listmap.setImageResource(R.drawable.map_select);
 
                 mapFragment = SupportMapFragment.newInstance();
                 getFragmentManager().beginTransaction().replace(R.id.search_map, mapFragment).commit();

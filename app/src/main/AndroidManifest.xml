@@ -45,6 +45,7 @@
         <activity android:name=".ui.common.SettingActivity" />
         <activity android:name=".ui.common.SigninActivity"/>
         <activity android:name=".ui.common.SignupActivity"/>
+        <activity android:name=".ui.driver.DrivingActivity"/>
     </application>
     <meta-data
         android:name="com.google.android.geo.API_KEY"

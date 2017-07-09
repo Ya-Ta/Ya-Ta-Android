@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <FrameLayout
+    <fragment
         android:id="@+id/search_map"
         class="com.google.android.gms.maps.MapFragment"
         android:layout_width="match_parent"
@@ -192,14 +192,14 @@
         android:id="@+id/arrive_btn"
         android:layout_width="120dp"
         android:layout_height="93dp"
-        android:background="@drawable/arrive"
+        android:background="@drawable/kakao"
         android:layout_alignParentBottom="true"/>
 
     <ImageButton
         android:id="@+id/kakao_btn"
         android:layout_width="120dp"
         android:layout_height="93dp"
-        android:background="@drawable/kakao"
+        android:background="@drawable/arrive"
         android:layout_alignParentBottom="true"
         android:layout_toEndOf="@id/arrive_btn"/>
 

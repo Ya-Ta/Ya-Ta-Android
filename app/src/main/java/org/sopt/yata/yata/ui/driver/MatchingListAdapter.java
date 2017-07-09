@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -172,8 +173,12 @@ public class MatchingListAdapter extends BaseAdapter {
                 text_carInfo.setText(car_info);
                 text_message.setText(string_message);
 
+              //  dialog.show();
+                dialog.getWindow().setGravity(Gravity.LEFT|Gravity.TOP);
+                WindowManager.LayoutParams params = dialog.getWindow().getAttributes();
+                params.y = 50;
+                dialog.getWindow().setAttributes(params);
                 dialog.show();
-                dialog.getWindow().setGravity(Gravity.LEFT);
 
                 cancel_btn.setOnClickListener(new View.OnClickListener() {
                     @Override

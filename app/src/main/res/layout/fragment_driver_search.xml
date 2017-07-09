@@ -57,7 +57,8 @@
                     android:gravity="center"
                     android:text="시/도"
                     android:textAlignment="center"
-                    android:textColor="#000000" />
+                    android:textColor="#000000"
+                    android:popupBackground="#fff"/>
 
                 <Spinner
                     android:id="@+id/start_sigungu"
@@ -70,7 +71,8 @@
                     android:gravity="center"
                     android:text="시/군/구"
                     android:textAlignment="center"
-                    android:textColor="#000000" />
+                    android:textColor="#000000"
+                    android:popupBackground="#fff"/>
 
                 <Spinner
                     android:id="@+id/end_sido"
@@ -82,7 +84,8 @@
                     android:gravity="center"
                     android:text="시/도"
                     android:textAlignment="center"
-                    android:textColor="#000000" />
+                    android:textColor="#000000"
+                    android:popupBackground="#fff"/>
 
                 <Spinner
                     android:id="@+id/end_sigungu"
@@ -94,7 +97,8 @@
                     android:gravity="center"
                     android:text="시/군/구"
                     android:textAlignment="center"
-                    android:textColor="#000000" />
+                    android:textColor="#000000"
+                    android:popupBackground="#fff"/>
 
                 <Button
                     android:id="@+id/switch_btn"
@@ -130,7 +134,7 @@
 
 
         </RelativeLayout>
-   </LinearLayout>
+    </LinearLayout>
     <Button
         android:id="@+id/searchbtn"
         android:layout_width="wrap_content"
@@ -153,27 +157,35 @@
         android:src="@drawable/belowtext_justride"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"/>
+        android:layout_marginBottom="10dp"/>
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="30dp">
+        <ImageView
+            android:id="@+id/img_listmap"
+            android:layout_width="160dp"
+            android:layout_height="55dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/list_select"
+            />
 
         <Button
             android:id="@+id/search_list_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="리스트"
+            android:layout_width="72dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="7dp"
+            android:background="@null"
             />
 
         <Button
             android:id="@+id/search_map_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="72dp"
+            android:layout_height="48dp"
             android:layout_toEndOf="@id/search_list_btn"
-            android:text="지도"
+            android:background="@null"
             />
     </RelativeLayout>
 </RelativeLayout>

@@ -2,77 +2,46 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="272dp"
+    android:layout_height="431dp"
     android:layout_gravity="center"
     android:gravity="center"
     android:background="#77000000"
-    android:padding="20dp"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
-
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="보험신청"
-        android:textSize="25dp"
-        android:layout_marginBottom="18dp"
-        android:gravity="center"
-        />
+        android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="0dp"
-        android:gravity="center">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="안전한 운행을 위한 야타의 "/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" 보험서비스"
-            android:textSize="18dp"/>
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="야타의 보험서비스를 신청하시겠습니까?"
-        android:gravity="center"
-        android:layout_marginTop="10dp"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="22dp"
-        android:gravity="center">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/insurance"
+            android:id="@+id/insuImg"/>
 
         <Button
-            android:id="@+id/insurance_car_btn"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
             android:background="@drawable/button_round_white"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_marginTop="375dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/insurance_car_btn"
+            android:text="건너뛰기"
             android:textColor="@drawable/stroke_button_text_color"
-            android:text="매칭하기"
-            android:layout_marginRight="3dp"
-            android:textSize="15sp"/>
+            android:textSize="15dp"/>
 
         <Button
             android:id="@+id/insurance_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:background="@drawable/setting_bluebox"
+            android:layout_marginTop="375dp"
+            android:layout_marginRight="21dp"
+            android:layout_toRightOf="@+id/insurance_car_btn"
             android:text="신청하기"
-            android:textColor="#ffffff"
-            android:textSize="15sp"
-            android:background="@drawable/button_round_gradation"
-            android:layout_marginLeft="3dp" />
-    </LinearLayout>
+            android:textColor="#fff"
+            android:textSize="15dp"/>
+
+    </RelativeLayout>
 </LinearLayout>

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="271dp"
-    android:layout_height="243dp"
+    android:layout_height="wrap_content"
     android:layout_gravity="center"
     android:background="@drawable/background_dialog"
     android:orientation="vertical">
@@ -11,13 +11,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-    <Button
-        android:id="@+id/driver_message_close"
-        android:layout_width="15dp"
-        android:layout_height="15dp"
-        android:layout_margin="10dp"
-        android:layout_gravity="center_vertical"
-        android:background="@drawable/cancelbutton"/>
+        <Button
+            android:id="@+id/driver_message_close"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/cancelbutton"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -85,7 +85,7 @@
             android:layout_toStartOf="@+id/minus_btn"
             android:background="@drawable/plus"
             android:gravity="center"
-             />
+            />
 
 
         <TextView
@@ -144,15 +144,28 @@
         <EditText
             android:id="@+id/edit_msg"
             android:layout_width="226dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/img_msg"
+            android:layout_height="20dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginBottom="1dp"
             android:textSize="10sp"
+            android:background="@null"
             android:textColor="#66ffffff"
             android:hint="전하고 싶은 메시지를 입력하세요."
-            android:scrollbars="none"
-            />
+            android:layout_below="@+id/img_msg"
+            android:layout_alignStart="@+id/img_msg" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="37dp"
+            android:layout_marginRight="37dp"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/edit_msg"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="2dp"
+            android:background="#FFFFFF"
+            tools:layout_editor_absoluteY="0dp" />
+
     </RelativeLayout>
 
     <Button

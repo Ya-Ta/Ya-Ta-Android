@@ -18,7 +18,6 @@ import android.view.ViewGroup;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
@@ -60,7 +59,7 @@ public class OwnerSearchFragment extends Fragment implements View.OnClickListene
     //기본
     AutoCompleteTextView topEdt;
     AutoCompleteTextView bottomEdt;
-    RelativeLayout searchBtn;
+    Button searchBtn;
 
     String start_location;
     String end_location;
@@ -143,7 +142,7 @@ public class OwnerSearchFragment extends Fragment implements View.OnClickListene
 
         topEdt = (AutoCompleteTextView) view.findViewById(R.id.topEdt);
         bottomEdt = (AutoCompleteTextView) view.findViewById(R.id.bottomEdt);
-        searchBtn = (RelativeLayout) view.findViewById(R.id.searchbtn);
+        searchBtn = (Button) view.findViewById(R.id.searchbtn);
 
         SharedPreferences user_token = activity.getSharedPreferences("usertoken", MODE_PRIVATE);
         token = user_token.getString("token", null);

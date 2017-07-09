@@ -67,7 +67,7 @@
         <EditText
             android:id="@+id/name_edit"
             android:layout_width="92dp"
-            android:layout_height="18dp"
+            android:layout_height="20dp"
             android:textSize="12sp"
             android:layout_toEndOf="@id/img_name"
             android:background="@null"
@@ -107,7 +107,7 @@
         <EditText
             android:id="@+id/id_edit"
             android:layout_width="92dp"
-            android:layout_height="18dp"
+            android:layout_height="20dp"
             android:layout_gravity="center"
             android:layout_toEndOf="@id/img_id"
             android:background="@null"
@@ -155,7 +155,7 @@
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="18dp"
+            android:layout_height="20dp"
             android:hint="                            Password"
             android:password="true"
             android:textSize="12sp"
@@ -197,7 +197,7 @@
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="18dp"
+            android:layout_height="20dp"
             android:hint="                    Confirm Password"
             android:password="true"
             android:textSize="12sp"
@@ -240,7 +240,7 @@
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="18dp"
+            android:layout_height="20dp"
             android:hint="                       Phone number"
             android:textSize="12sp"
             android:backgroundTint="#000000"
@@ -281,7 +281,7 @@
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="18dp"
+            android:layout_height="20dp"
             android:hint="                        Email Address"
             android:textSize="12sp"
             android:backgroundTint="#000000"
@@ -347,7 +347,7 @@
                     android:id="@+id/textView5"
                     android:layout_width="wrap_content"
                     android:layout_height="20dp"
-                    android:background="@color/colorBackground"
+                    android:background="@null"
                     android:text="로그인하기"
                     android:textColor="#0B5EC4"
                     android:textSize="16sp" />

@@ -170,6 +170,8 @@ public class OwnerListAdapter extends BaseAdapter {
                     contact_match.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
+                            //activity_driving으로 넘어가야함.
+                            context.startActivity(new Intent(context, DrivingActivity.class)); // 탭바 없는거
 
                         }
                     });
